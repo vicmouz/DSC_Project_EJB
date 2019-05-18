@@ -11,7 +11,7 @@ Realizar a troca da variável de localização do Glassfish no "pom.xml"
 ...
 
 ### Configuração
-1- Criar o schema no MySql
+1- Criar o schema no MySql \n
 2- Iniciar o glassfish
 3- Voltando ao NetBeans, clicar na aba serviços e criar uma nova conexão com o banco de dados
 4- Seleciona o schema criado no passo 1
