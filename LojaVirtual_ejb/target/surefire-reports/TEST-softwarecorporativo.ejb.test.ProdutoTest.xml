@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="7" failures="1" name="softwarecorporativo.ejb.test.ProdutoTest" time="46.62" errors="1" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/home/victor/jdk1.8.0_111/jre/lib/amd64"/>
+    <property name="java.vm.version" value="25.111-b14"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="BR"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="test" value="softwarecorporativo.ejb.test.ProdutoTest"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/home/victor/NetBeansProjects/LojaVirtual_ejb"/>
+    <property name="java.runtime.version" value="1.8.0_111-b14"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/home/victor/jdk1.8.0_111/jre/lib/endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Linux"/>
+    <property name="maven.ext.class.path" value="/home/victor/netbeans-8.2/java/maven-nblib/netbeans-eventspy.jar"/>
+    <property name="classworlds.conf" value="/home/victor/netbeans-8.2/java/maven/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/home/victor/jdk1.8.0_111/jre/lib/amd64:/home/victor/jdk1.8.0_111/jre/lib/i386::/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="4.18.0-17-generic"/>
+    <property name="user.home" value="/home/victor"/>
+    <property name="user.timezone" value="America/Recife"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="victor"/>
+    <property name="java.class.path" value="/home/victor/netbeans-8.2/java/maven/boot/plexus-classworlds-2.4.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/home/victor/jdk1.8.0_111/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=softwarecorporativo.ejb.test.ProdutoTest -Dmaven.ext.class.path=/home/victor/netbeans-8.2/java/maven-nblib/netbeans-eventspy.jar surefire:test"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="pt"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_111"/>
+    <property name="java.ext.dirs" value="/home/victor/jdk1.8.0_111/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="securerandom.source" value="file:/dev/./urandom"/>
+    <property name="sun.boot.class.path" value="/home/victor/jdk1.8.0_111/jre/lib/resources.jar:/home/victor/jdk1.8.0_111/jre/lib/rt.jar:/home/victor/jdk1.8.0_111/jre/lib/sunrsasign.jar:/home/victor/jdk1.8.0_111/jre/lib/jsse.jar:/home/victor/jdk1.8.0_111/jre/lib/jce.jar:/home/victor/jdk1.8.0_111/jre/lib/charsets.jar:/home/victor/jdk1.8.0_111/jre/lib/jfr.jar:/home/victor/jdk1.8.0_111/jre/classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/home/victor/netbeans-8.2/java/maven"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase classname="softwarecorporativo.ejb.test.ProdutoTest" name="atualizarInvalido" time="0.255">
+    <failure message="Expected exception: javax.ejb.EJBException" type="java.lang.AssertionError">java.lang.AssertionError: Expected exception: javax.ejb.EJBException
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:32)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+</failure>
+    <system-out>JdbcRuntimeExtension,  getAllSystemRAResourcesAndPools = [GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcConnectionPool, GlassFishConfigBean.org.glassfish.jdbc.config.JdbcResource]
+[EL Info]: server: 2019-05-25 10:15:04.845--Detected server platform: org.eclipse.persistence.platform.server.NoServerPlatform.
+</system-out>
+    <system-err>mai 25, 2019 10:14:54 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl createContainer
+INFORMAÇÕES: [EJBContainerProviderImpl] Using installation location /home/victor/glassfish-4.1.1/glassfish
+mai 25, 2019 10:14:54 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl createContainer
+INFORMAÇÕES: [EJBContainerProviderImpl] Using config file location: file:/tmp/domain7328970831016257952xml
+mai 25, 2019 10:14:54 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl createContainer
+INFORMAÇÕES: [EJBContainerProviderImpl] Using runtime class: class com.sun.enterprise.glassfish.bootstrap.StaticGlassFishRuntime
+mai 25, 2019 10:14:55 AM org.hibernate.validator.internal.util.Version &lt;clinit&gt;
+INFO: HV000001: Hibernate Validator 5.1.2.Final
+mai 25, 2019 10:14:56 AM org.glassfish.security.services.impl.authorization.AuthorizationServiceImpl initialize
+INFORMAÇÕES: Authorization Service has successfully initialized.
+mai 25, 2019 10:14:56 AM com.sun.enterprise.security.auth.realm.Realm doInstantiate
+INFORMAÇÕES: Realm [admin-realm] of classtype [com.sun.enterprise.security.auth.realm.file.FileRealm] successfully created.
+mai 25, 2019 10:14:56 AM com.sun.enterprise.security.auth.realm.Realm doInstantiate
+INFORMAÇÕES: Realm [file] of classtype [com.sun.enterprise.security.auth.realm.file.FileRealm] successfully created.
+mai 25, 2019 10:14:56 AM com.sun.enterprise.security.auth.realm.Realm doInstantiate
+INFORMAÇÕES: Realm [certificate] of classtype [com.sun.enterprise.security.auth.realm.certificate.CertificateRealm] successfully created.
+mai 25, 2019 10:14:56 AM org.glassfish.ha.store.spi.BackingStoreFactoryRegistry register
+INFORMAÇÕES: Registered org.glassfish.ha.store.adapter.cache.ShoalBackingStoreProxy for persistence-type = replicated in BackingStoreFactoryRegistry
+mai 25, 2019 10:14:56 AM com.sun.enterprise.v3.server.AppServerStartup postStartupJob
+INFORMAÇÕES: GlassFish Server Open Source Edition  4.1.1  (1) startup time : Embedded (767ms), startup services(763ms), total(1.530ms)
+mai 25, 2019 10:14:56 AM com.sun.jts.CosTransactions.DefaultTransactionService setServerName
+INFORMAÇÕES: JTS5014: Recoverable JTS instance, serverId = [100]
+mai 25, 2019 10:14:56 AM org.glassfish.admin.mbeanserver.JMXStartupService$JMXConnectorsStarterThread run
+INFORMAÇÕES: JMXStartupService has disabled JMXConnector system
+mai 25, 2019 10:14:56 AM org.glassfish.admin.mbeanserver.JMXStartupService shutdown
+INFORMAÇÕES: JMXStartupService and JMXConnectors have been shut down.
+mai 25, 2019 10:14:56 AM com.sun.enterprise.v3.server.AppServerStartup stop
+INFORMAÇÕES: Shutdown procedure finished
+mai 25, 2019 10:14:56 AM org.glassfish.ha.store.spi.BackingStoreFactoryRegistry register
+INFORMAÇÕES: Registered org.glassfish.ha.store.adapter.cache.ShoalBackingStoreProxy for persistence-type = replicated in BackingStoreFactoryRegistry
+mai 25, 2019 10:14:56 AM com.sun.enterprise.v3.server.AppServerStartup postStartupJob
+INFORMAÇÕES: GlassFish Server Open Source Edition  4.1.1  (1) startup time : Embedded (2.009ms), startup services(19ms), total(2.028ms)
+mai 25, 2019 10:14:56 AM org.glassfish.admin.mbeanserver.JMXStartupService$JMXConnectorsStarterThread run
+INFORMAÇÕES: JMXStartupService has disabled JMXConnector system
+mai 25, 2019 10:14:56 AM org.glassfish.ejb.embedded.EJBContainerProviderImpl skipJar
+INFORMAÇÕES: ... skipping entry with a Manifest file with a special attribute: glassfish-embedded-static-shell.jar
+mai 25, 2019 10:14:57 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMAÇÕES: [DeploymentElement] adding EJB module to ScatteredArchive classes
+mai 25, 2019 10:14:57 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMAÇÕES: [DeploymentElement] adding library to ScatteredArchive hamcrest-core-1.3.jar
+mai 25, 2019 10:14:57 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMAÇÕES: [DeploymentElement] adding library to ScatteredArchive jboss-logging-3.3.0.Final.jar
+mai 25, 2019 10:14:57 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMAÇÕES: [DeploymentElement] adding library to ScatteredArchive mysql-connector-java-5.1.34.jar
+mai 25, 2019 10:14:57 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMAÇÕES: [DeploymentElement] adding library to ScatteredArchive validation-api-1.1.0.Final.jar
+mai 25, 2019 10:14:57 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMAÇÕES: [DeploymentElement] adding library to ScatteredArchive poi-3.14.jar
+mai 25, 2019 10:14:57 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMAÇÕES: [DeploymentElement] adding library to ScatteredArchive classmate-1.3.1.jar
+mai 25, 2019 10:14:57 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMAÇÕES: [DeploymentElement] adding library to ScatteredArchive javaee-web-api-7.0.jar
+mai 25, 2019 10:14:57 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMAÇÕES: [DeploymentElement] adding library to ScatteredArchive junit-4.11.jar
+mai 25, 2019 10:14:57 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMAÇÕES: [DeploymentElement] adding library to ScatteredArchive dbunit-2.5.3.jar
+mai 25, 2019 10:14:57 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMAÇÕES: [DeploymentElement] adding library to ScatteredArchive xmlbeans-2.6.0.jar
+mai 25, 2019 10:14:57 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMAÇÕES: [DeploymentElement] adding library to ScatteredArchive poi-ooxml-schemas-3.14.jar
+mai 25, 2019 10:14:57 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMAÇÕES: [DeploymentElement] adding library to ScatteredArchive test-classes
+mai 25, 2019 10:14:57 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMAÇÕES: [DeploymentElement] adding library to ScatteredArchive slf4j-api-1.7.21.jar
+mai 25, 2019 10:14:57 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMAÇÕES: [DeploymentElement] adding library to ScatteredArchive curvesapi-1.03.jar
+mai 25, 2019 10:14:57 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMAÇÕES: [DeploymentElement] adding library to ScatteredArchive commons-codec-1.10.jar
+mai 25, 2019 10:14:57 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMAÇÕES: [DeploymentElement] adding library to ScatteredArchive commons-collections-3.2.2.jar
+mai 25, 2019 10:14:57 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMAÇÕES: [DeploymentElement] adding library to ScatteredArchive stax-api-1.0.1.jar
+mai 25, 2019 10:14:57 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMAÇÕES: [DeploymentElement] adding library to ScatteredArchive hibernate-validator-5.4.2.Final.jar
+mai 25, 2019 10:14:57 AM org.glassfish.ejb.embedded.DeploymentElement getOrCreateApplication
+INFORMAÇÕES: [DeploymentElement] adding library to ScatteredArchive poi-ooxml-3.14.jar
+mai 25, 2019 10:14:57 AM org.glassfish.ejb.embedded.EJBContainerImpl deploy
+INFORMAÇÕES: [EJBContainerImpl] Deploying app: org.glassfish.embeddable.archive.ScatteredArchive@4f1ea463
+mai 25, 2019 10:14:57 AM org.glassfish.ejb.embedded.EJBContainerImpl deploy
+INFORMAÇÕES: [EJBContainerImpl] GlassFish status: STARTED
+mai 25, 2019 10:14:57 AM org.glassfish.ejb.embedded.EJBContainerImpl deploy
+INFORMAÇÕES: [EJBContainerImpl] Deploying as a ScatteredArchive
+mai 25, 2019 10:15:03 AM com.sun.enterprise.security.ssl.impl.SecuritySupportImpl checkCertificateDates
+GRAVE: The SSL certificate has expired: [
+[
+  Version: V3
+  Subject: OU=Equifax Secure Certificate Authority, O=Equifax, C=US
+  Signature Algorithm: SHA1withRSA, OID = 1.2.840.113549.1.1.5
+
+  Key:  Sun RSA public key, 1024 bits
+  modulus: 135786214035069526348186531221551781468391756233528066061569654028671100866720352830303278016129003918213826297308054231261658522889438712013757624116391437358730449661353175673177742307421061340003741057138887918110217006515773038453829253517076741780039735595086881329494037450587568122088113584549069375417
+  public exponent: 65537
+  Validity: [From: Sat Aug 22 13:41:51 BRT 1998,
+               To: Wed Aug 22 13:41:51 BRT 2018]
+  Issuer: OU=Equifax Secure Certificate Authority, O=Equifax, C=US
+  SerialNumber: [    35def4cf]
+
+Certificate Extensions: 7
+[1]: ObjectId: 1.2.840.113533.7.65.0 Criticality=false
+Extension unknown: DER encoded OCTET string =
+0000: 04 0D 30 0B 1B 05 56 33   2E 30 63 03 02 06 C0     ..0...V3.0c....
+
+
+[2]: ObjectId: 2.5.29.35 Criticality=false
+AuthorityKeyIdentifier [
+KeyIdentifier [
+0000: 48 E6 68 F9 2B D2 B2 95   D7 47 D8 23 20 10 4F 33  H.h.+....G.# .O3
+0010: 98 90 9F D4                                        ....
+]
+]
+
+[3]: ObjectId: 2.5.29.19 Criticality=false
+BasicConstraints:[
+  CA:true
+  PathLen:2147483647
+]
+
+[4]: ObjectId: 2.5.29.31 Criticality=false
+CRLDistributionPoints [
+  [DistributionPoint:
+     [CN=CRL1, OU=Equifax Secure Certificate Authority, O=Equifax, C=US]
+]]
+
+[5]: ObjectId: 2.5.29.15 Criticality=false
+KeyUsage [
+  Key_CertSign
+  Crl_Sign
+]
+
+[6]: ObjectId: 2.5.29.16 Criticality=false
+PrivateKeyUsage: [
+To: Wed Aug 22 13:41:51 BRT 2018]
+
+[7]: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: 48 E6 68 F9 2B D2 B2 95   D7 47 D8 23 20 10 4F 33  H.h.+....G.# .O3
+0010: 98 90 9F D4                                        ....
+]
+]
+
+]
+  Algorithm: [SHA1withRSA]
+  Signature:
+0000: 58 CE 29 EA FC F7 DE B5   CE 02 B9 17 B5 85 D1 B9  X.).............
+0010: E3 E0 95 CC 25 31 0D 00   A6 92 6E 7F B6 92 63 9E  ....%1....n...c.
+0020: 50 95 D1 9A 6F E4 11 DE   63 85 6E 98 EE A8 FF 5A  P...o...c.n....Z
+0030: C8 D3 55 B2 66 71 57 DE   C0 21 EB 3D 2A A7 23 49  ..U.fqW..!.=*.#I
+0040: 01 04 86 42 7B FC EE 7F   A2 16 52 B5 67 67 D3 40  ...B......R.gg.@
+0050: DB 3B 26 58 B2 28 77 3D   AE 14 77 61 D6 FA 2A 66  .;&amp;X.(w=..wa..*f
+0060: 27 A0 0D FA A7 73 5C EA   70 F1 94 21 65 44 5F FA  &apos;....s\.p..!eD_.
+0070: FC EF 29 68 A9 A2 87 79   EF 79 EF 4F AC 07 77 38  ..)h...y.y.O..w8
+
+]
+mai 25, 2019 10:15:03 AM com.sun.enterprise.security.ssl.impl.SecuritySupportImpl checkCertificateDates
+GRAVE: The SSL certificate has expired: [
+[
+  Version: V1
+  Subject: CN=GTE CyberTrust Global Root, OU=&quot;GTE CyberTrust Solutions, Inc.&quot;, O=GTE Corporation, C=US
+  Signature Algorithm: MD5withRSA, OID = 1.2.840.113549.1.1.4
+
+  Key:  Sun RSA public key, 1024 bits
+  modulus: 104674226241368487598835828377585222181792546532354327780214427055917513664449991602803276678454577364904540367827644455215731003386468752240014232146814457308076052176227490263634768927290191763858631579785604655038492469791381988347440106477066514204303723029602991655085187937840556671697442212352844587673
+  public exponent: 65537
+  Validity: [From: Wed Aug 12 21:29:00 BRT 1998,
+               To: Mon Aug 13 20:59:00 BRT 2018]
+  Issuer: CN=GTE CyberTrust Global Root, OU=&quot;GTE CyberTrust Solutions, Inc.&quot;, O=GTE Corporation, C=US
+  SerialNumber: [    01a5]
+
+]
+  Algorithm: [MD5withRSA]
+  Signature:
+0000: 6D EB 1B 09 E9 5E D9 51   DB 67 22 61 A4 2A 3C 48  m....^.Q.g&quot;a.*&lt;H
+0010: 77 E3 A0 7C A6 DE 73 A2   14 03 85 3D FB AB 0E 30  w.....s....=...0
+0020: C5 83 16 33 81 13 08 9E   7B 34 4E DF 40 C8 74 D7  ...3.....4N.@.t.
+0030: B9 7D DC F4 76 55 7D 9B   63 54 18 E9 F0 EA F3 5C  ....vU..cT.....\
+0040: B1 D9 8B 42 1E B9 C0 95   4E BA FA D5 E2 7C F5 68  ...B....N......h
+0050: 61 BF 8E EC 05 97 5F 5B   B0 D7 A3 85 34 C4 24 A7  a....._[....4.$.
+0060: 0D 0F 95 93 EF CB 94 D8   9E 1F 9D 5C 85 6D C7 AA  ...........\.m..
+0070: AE 4F 1F 22 B5 CD 95 AD   BA A7 CC F9 AB 0B 7A 7F  .O.&quot;..........z.
+
+]
+mai 25, 2019 10:15:04 AM com.sun.enterprise.security.SecurityLifecycle &lt;init&gt;
+INFORMAÇÕES: Java security manager is disabled.
+mai 25, 2019 10:15:04 AM com.sun.enterprise.security.SecurityLifecycle onInitialization
+INFORMAÇÕES: Entering Security Startup Service.
+mai 25, 2019 10:15:04 AM com.sun.enterprise.security.PolicyLoader loadPolicy
+INFORMAÇÕES: Loading policy provider com.sun.enterprise.security.provider.PolicyWrapper.
+mai 25, 2019 10:15:04 AM com.sun.enterprise.security.SecurityLifecycle onInitialization
+INFORMAÇÕES: Security Service(s) started successfully.
+mai 25, 2019 10:15:08 AM org.eclipse.persistence.default
+INFORMAÇÕES: Detected server platform: org.eclipse.persistence.platform.server.NoServerPlatform.
+mai 25, 2019 10:15:08 AM org.eclipse.persistence.session./file:/tmp/gfembed1597736228767556218tmp/applications/classes/_descorp_ejb
+INFORMAÇÕES: EclipseLink, version: Eclipse Persistence Services - 2.6.1.v20150605-31e8258
+mai 25, 2019 10:15:08 AM org.eclipse.persistence.session./file:/tmp/gfembed1597736228767556218tmp/applications/classes/_descorp_ejb.metadata
+ADVERTÊNCIA: Reverting the lazy setting on the OneToOne or ManyToOne attribute [corImagem] for the entity class [class softwarecorporativo.entidade.ImagemProduto] since weaving was not enabled or did not occur.
+mai 25, 2019 10:15:08 AM org.eclipse.persistence.session./file:/tmp/gfembed1597736228767556218tmp/applications/classes/_descorp_ejb.metadata
+ADVERTÊNCIA: Reverting the lazy setting on the OneToOne or ManyToOne attribute [Clienteusuario] for the entity class [class softwarecorporativo.entidade.Pedido] since weaving was not enabled or did not occur.
+mai 25, 2019 10:15:08 AM org.eclipse.persistence.session./file:/tmp/gfembed1597736228767556218tmp/applications/classes/_descorp_ejb.connection
+INFORMAÇÕES: /file:/tmp/gfembed1597736228767556218tmp/applications/classes/_descorp_ejb login successful
+mai 25, 2019 10:15:08 AM org.eclipse.persistence.session./file:/tmp/gfembed1597736228767556218tmp/applications/classes/_descorp_ejb.server
+ADVERTÊNCIA: Failed to find MBean Server: null or empty List returned from MBeanServerFactory.findMBeanServer(null)
+mai 25, 2019 10:15:32 AM com.sun.ejb.containers.BaseContainer initializeHome
+INFORMAÇÕES: Portable JNDI names for EJB ejb/ProdutoServico: [java:global/classes/ejb/ProdutoServico, java:global/classes/ejb/ProdutoServico!softwarecorporativo.servico.ProdutoServico]
+mai 25, 2019 10:15:32 AM com.sun.ejb.containers.BaseContainer initializeHome
+INFORMAÇÕES: Portable JNDI names for EJB ejb/AdministradorServico: [java:global/classes/ejb/AdministradorServico!softwarecorporativo.servico.AdministradorServico, java:global/classes/ejb/AdministradorServico]
+mai 25, 2019 10:15:32 AM org.jboss.weld.bootstrap.WeldStartup &lt;clinit&gt;
+INFO: WELD-000900: 2.2.13 (Final)
+mai 25, 2019 10:15:33 AM org.jboss.weld.event.ExtensionObserverMethodImpl checkRequiredTypeAnnotations
+WARN: WELD-000411: Observer method [BackedAnnotatedMethod] private org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.
+mai 25, 2019 10:15:33 AM org.jboss.weld.event.ExtensionObserverMethodImpl checkRequiredTypeAnnotations
+WARN: WELD-000411: Observer method [BackedAnnotatedMethod] private org.glassfish.jersey.ext.cdi1x.internal.CdiComponentProvider.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.
+mai 25, 2019 10:15:33 AM org.jboss.weld.event.ExtensionObserverMethodImpl checkRequiredTypeAnnotations
+WARN: WELD-000411: Observer method [BackedAnnotatedMethod] org.glassfish.sse.impl.ServerSentEventCdiExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.
+mai 25, 2019 10:15:33 AM org.jboss.weld.event.ExtensionObserverMethodImpl checkRequiredTypeAnnotations
+WARN: WELD-000411: Observer method [BackedAnnotatedMethod] public org.glassfish.jms.injection.JMSCDIExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.
+mai 25, 2019 10:15:33 AM org.jboss.weld.event.ExtensionObserverMethodImpl checkRequiredTypeAnnotations
+WARN: WELD-000411: Observer method [BackedAnnotatedMethod] org.glassfish.sse.impl.ServerSentEventCdiExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;, BeanManager) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.
+mai 25, 2019 10:15:33 AM org.jboss.weld.event.ExtensionObserverMethodImpl checkRequiredTypeAnnotations
+WARN: WELD-000411: Observer method [BackedAnnotatedMethod] public org.glassfish.jms.injection.JMSCDIExtension.processAnnotatedType(@Observes ProcessAnnotatedType&lt;Object&gt;) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.
+mai 25, 2019 10:15:34 AM org.glassfish.deployment.admin.DeployCommand execute
+INFORMAÇÕES: classes was successfully deployed in 32.634 milliseconds.
+SLF4J: Failed to load class &quot;org.slf4j.impl.StaticLoggerBinder&quot;.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+</system-err>
+  </testcase>
+  <testcase classname="softwarecorporativo.ejb.test.ProdutoTest" name="existeProduto" time="0"/>
+  <testcase classname="softwarecorporativo.ejb.test.ProdutoTest" name="getProdutoPorID" time="0"/>
+  <testcase classname="softwarecorporativo.ejb.test.ProdutoTest" name="getProdutoPorId" time="0"/>
+  <testcase classname="softwarecorporativo.ejb.test.ProdutoTest" name="atualizar" time="0.058"/>
+  <testcase classname="softwarecorporativo.ejb.test.ProdutoTest" name="consultarProdutoPorIdInvalido" time="0.021">
+    <error message="Unexpected exception, expected&lt;javax.ejb.EJBException&gt; but was&lt;java.lang.AssertionError&gt;" type="java.lang.Exception">java.lang.Exception: Unexpected exception, expected&lt;javax.ejb.EJBException&gt; but was&lt;java.lang.AssertionError&gt;
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:28)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+Caused by: java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at softwarecorporativo.ejb.test.ProdutoTest.consultarProdutoPorIdInvalido(ProdutoTest.java:64)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	... 25 more
+</error>
+    <system-err>mai 25, 2019 10:15:40 AM com.sun.ejb.containers.BaseContainer postInvoke
+ADVERTÊNCIA: A system exception occurred during an invocation on EJB ejb/ProdutoServico, method: public softwarecorporativo.entidade.Produto softwarecorporativo.servico.ProdutoServico.consultarPorID(java.lang.Long)
+mai 25, 2019 10:15:40 AM com.sun.ejb.containers.BaseContainer postInvoke
+ADVERTÊNCIA: 
+javax.ejb.EJBException
+	at com.sun.ejb.containers.EJBContainerTransactionManager.processSystemException(EJBContainerTransactionManager.java:752)
+	at com.sun.ejb.containers.EJBContainerTransactionManager.checkExceptionNoTx(EJBContainerTransactionManager.java:642)
+	at com.sun.ejb.containers.EJBContainerTransactionManager.postInvokeTx(EJBContainerTransactionManager.java:537)
+	at com.sun.ejb.containers.BaseContainer.postInvokeTx(BaseContainer.java:4566)
+	at com.sun.ejb.containers.BaseContainer.postInvoke(BaseContainer.java:2074)
+	at com.sun.ejb.containers.BaseContainer.postInvoke(BaseContainer.java:2044)
+	at com.sun.ejb.containers.EJBLocalObjectInvocationHandler.invoke(EJBLocalObjectInvocationHandler.java:220)
+	at com.sun.ejb.containers.EJBLocalObjectInvocationHandlerDelegate.invoke(EJBLocalObjectInvocationHandlerDelegate.java:88)
+	at com.sun.proxy.$Proxy182.consultarPorID(Unknown Source)
+	at softwarecorporativo.servico.__EJB31_Generated__ProdutoServico__Intf____Bean__.consultarPorID(Unknown Source)
+	at softwarecorporativo.ejb.test.ProdutoTest.consultarProdutoPorIdInvalido(ProdutoTest.java:62)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:19)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+Caused by: javax.persistence.NoResultException: getSingleResult() did not retrieve any entities.
+	at org.eclipse.persistence.internal.jpa.QueryImpl.throwNoResultException(QueryImpl.java:976)
+	at org.eclipse.persistence.internal.jpa.QueryImpl.getSingleResult(QueryImpl.java:535)
+	at org.eclipse.persistence.internal.jpa.EJBQueryImpl.getSingleResult(EJBQueryImpl.java:400)
+	at com.sun.enterprise.container.common.impl.QueryWrapper.getSingleResult(QueryWrapper.java:99)
+	at com.sun.enterprise.container.common.impl.TypedQueryWrapper.getSingleResult(TypedQueryWrapper.java:81)
+	at softwarecorporativo.servico.Servico.consultarEntidade(Servico.java:79)
+	at softwarecorporativo.servico.ProdutoServico.consultarPorID(ProdutoServico.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.glassfish.ejb.security.application.EJBSecurityManager.runMethod(EJBSecurityManager.java:1081)
+	at org.glassfish.ejb.security.application.EJBSecurityManager.invoke(EJBSecurityManager.java:1153)
+	at com.sun.ejb.containers.BaseContainer.invokeBeanMethod(BaseContainer.java:4786)
+	at com.sun.ejb.EjbInvocation.invokeBeanMethod(EjbInvocation.java:656)
+	at com.sun.ejb.containers.interceptors.AroundInvokeChainImpl.invokeNext(InterceptorManager.java:822)
+	at com.sun.ejb.EjbInvocation.proceed(EjbInvocation.java:608)
+	at org.hibernate.validator.internal.cdi.interceptor.ValidationInterceptor.validateMethodInvocation(ValidationInterceptor.java:87)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.sun.ejb.containers.interceptors.AroundInvokeInterceptor.intercept(InterceptorManager.java:883)
+	at com.sun.ejb.containers.interceptors.AroundInvokeChainImpl.invokeNext(InterceptorManager.java:822)
+	at com.sun.ejb.EjbInvocation.proceed(EjbInvocation.java:608)
+	at org.jboss.weld.ejb.AbstractEJBRequestScopeActivationInterceptor.aroundInvoke(AbstractEJBRequestScopeActivationInterceptor.java:73)
+	at org.jboss.weld.ejb.SessionBeanInterceptor.aroundInvoke(SessionBeanInterceptor.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.sun.ejb.containers.interceptors.AroundInvokeInterceptor.intercept(InterceptorManager.java:883)
+	at com.sun.ejb.containers.interceptors.AroundInvokeChainImpl.invokeNext(InterceptorManager.java:822)
+	at com.sun.ejb.EjbInvocation.proceed(EjbInvocation.java:608)
+	at com.sun.ejb.containers.interceptors.SystemInterceptorProxy.doCall(SystemInterceptorProxy.java:163)
+	at com.sun.ejb.containers.interceptors.SystemInterceptorProxy.aroundInvoke(SystemInterceptorProxy.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at com.sun.ejb.containers.interceptors.AroundInvokeInterceptor.intercept(InterceptorManager.java:883)
+	at com.sun.ejb.containers.interceptors.AroundInvokeChainImpl.invokeNext(InterceptorManager.java:822)
+	at com.sun.ejb.containers.interceptors.InterceptorManager.intercept(InterceptorManager.java:369)
+	at com.sun.ejb.containers.BaseContainer.__intercept(BaseContainer.java:4758)
+	at com.sun.ejb.containers.BaseContainer.intercept(BaseContainer.java:4746)
+	at com.sun.ejb.containers.EJBLocalObjectInvocationHandler.invoke(EJBLocalObjectInvocationHandler.java:212)
+	... 38 more
+
+</system-err>
+  </testcase>
+  <testcase classname="softwarecorporativo.ejb.test.ProdutoTest" name="persistir" time="0.05"/>
+</testsuite>
