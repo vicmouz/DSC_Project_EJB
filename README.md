@@ -25,3 +25,6 @@
 7. Acessar a área de resources do glassfish
 8. "Add resource" e seleciona o "glassfish-resources.xml"
 9. Logo após adicionar o "glassfish-resources.xml" do projeto, deve-se reiniciar o Glassfish, espere um pouco e reinicie o console do mesmo
+
+
+> Notepad.pw: https://notepad.pw/c0z8ldy1
