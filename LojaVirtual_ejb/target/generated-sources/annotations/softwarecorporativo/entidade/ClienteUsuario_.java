@@ -7,7 +7,7 @@ import javax.persistence.metamodel.StaticMetamodel;
 import softwarecorporativo.entidade.EnderecoCliente;
 import softwarecorporativo.entidade.Pedido;
 
-@Generated(value="EclipseLink-2.6.1.v20150605-rNA", date="2019-05-25T08:45:11")
+@Generated(value="EclipseLink-2.6.1.v20150605-rNA", date="2019-05-28T10:36:43")
 @StaticMetamodel(ClienteUsuario.class)
 public class ClienteUsuario_ extends UsuarioGeral_ {
 

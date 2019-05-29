@@ -51,11 +51,16 @@ import javax.validation.constraints.Size;
             @NamedQuery(
                     name = "ClienteUsuario.PorEmail",
                     query = "SELECT cu FROM UsuarioGeral cu WHERE cu.email LIKE :email ORDER BY cu.id"
+            ),
+            @NamedQuery(
+                    name = ClienteUsuario.Clienteporcpf,
+                    query = "SELECT a FROM UsuarioGeral a WHERE a.cpf = ?1"
             )
+             
         }
 )
 public class ClienteUsuario extends UsuarioGeral implements Serializable {
-
+public static final String Clienteporcpf = "Clienteporcpf";
 
 
 

@@ -8,7 +8,7 @@ import softwarecorporativo.entidade.CorProduto;
 import softwarecorporativo.entidade.TamanhoProduto;
 import softwarecorporativo.entidade.TipoProduto;
 
-@Generated(value="EclipseLink-2.6.1.v20150605-rNA", date="2019-05-25T08:45:11")
+@Generated(value="EclipseLink-2.6.1.v20150605-rNA", date="2019-05-28T10:36:43")
 @StaticMetamodel(Produto.class)
 public class Produto_ extends Entidade_ {
 

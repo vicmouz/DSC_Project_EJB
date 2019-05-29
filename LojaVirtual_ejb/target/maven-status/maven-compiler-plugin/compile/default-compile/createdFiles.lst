@@ -2,8 +2,8 @@ softwarecorporativo/entidade/Entidade_.class
 softwarecorporativo/entidade/EnderecoCliente_.class
 softwarecorporativo/entidade/Produto.class
 softwarecorporativo/entidade/ImagemProduto_.class
-softwarecorporativo/entidade/EnderecoCliente.class
 softwarecorporativo/validador/ValidaPais.class
+softwarecorporativo/entidade/EnderecoCliente.class
 softwarecorporativo/entidade/Pedido_.class
 softwarecorporativo/servico/ProdutoServico.class
 softwarecorporativo/servico/AdministradorServico.class
@@ -11,8 +11,8 @@ softwarecorporativo/entidade/UsuarioGeral_.class
 softwarecorporativo/entidade/CorProduto_.class
 softwarecorporativo/entidade/TamanhoProduto.class
 softwarecorporativo/entidade/Produto_.class
-softwarecorporativo/entidade/CorProduto.class
 softwarecorporativo/entidade/TipoProduto.class
+softwarecorporativo/entidade/CorProduto.class
 softwarecorporativo/entidade/Entidade.class
 softwarecorporativo/entidade/Pedido.class
 softwarecorporativo/entidade/Administrador.class
