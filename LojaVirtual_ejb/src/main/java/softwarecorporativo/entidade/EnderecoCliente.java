@@ -46,6 +46,9 @@ import org.hibernate.validator.constraints.NotBlank;
             @NamedQuery(
                     name = "EnderecoCliente.PorNome",
                     query = "SELECT e FROM EnderecoCliente e WHERE e.nome LIKE :nome ORDER BY e.id"
+            ),@NamedQuery(
+                    name = EnderecoCliente.EnderecoPorCep,
+                    query = "SELECT e FROM EnderecoCliente e WHERE e.cep = ?1"
             )
                         }
 )
@@ -66,7 +69,7 @@ import org.hibernate.validator.constraints.NotBlank;
             @ColumnResult(name = "TOTAL_ITENS", type = Long.class)}
 )
 public class EnderecoCliente extends Entidade implements Serializable{
-    
+    public static final String EnderecoPorCep = "EnderecoPorCep";
  @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
  @Column(name="ENDERECO_ID")

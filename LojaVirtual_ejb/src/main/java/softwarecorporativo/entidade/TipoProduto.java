@@ -29,12 +29,17 @@ import javax.validation.constraints.NotNull;
         {
             @NamedQuery(
                     name = "TipoProduto.PorNome",
-                    query = "SELECT t FROM TipoProduto t WHERE t.nome LIKE :nome ORDER BY t.id")
-           
+                    query = "SELECT t FROM TipoProduto t WHERE t.nome LIKE :nome ORDER BY t.id"),
+            
+           @NamedQuery(
+                    name = TipoProduto.TipoProdutoPorNome,
+                    query = "SELECT t FROM TipoProduto t WHERE t.nome= ?1")
                         }
 )
 public class TipoProduto extends Entidade implements Serializable{
-  
+      
+ public static final String TipoProdutoPorNome = "TipoProdutoPorNome";
+
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 @Column(name = "TIPOPRODUTO_ID")

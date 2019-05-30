@@ -34,12 +34,18 @@ import org.hibernate.validator.constraints.NotEmpty;
                     query = "SELECT t FROM  TamanhoProduto t WHERE t.nome LIKE :nome ORDER BY t.id"),
             @NamedQuery(
                     name = "TamanhoProduto.PorTipo",
-                    query = "SELECT t FROM TamanhoProduto t WHERE t.tipo LIKE :tipo ORDER BY t.id")
+                    query = "SELECT t FROM TamanhoProduto t WHERE t.tipo LIKE :tipo ORDER BY t.id"),
+            @NamedQuery(
+                    name = TamanhoProduto.TamanhoProdutoPorTipo,
+                    query = "SELECT t FROM TamanhoProduto t WHERE t.tipo= ?1")
            
                         }
 )
 public class TamanhoProduto extends Entidade implements Serializable{
  
+    
+  public static final String TamanhoProdutoPorTipo = "TamanhoProdutoPorTipo";
+
  @Id
  @GeneratedValue(strategy = GenerationType.IDENTITY)
  @Column(name="TAMANHOPRODUTO_ID")

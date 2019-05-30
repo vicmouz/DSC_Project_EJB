@@ -1,0 +1,7 @@
+#surefire
+#Wed May 29 19:25:26 BRT 2019
+maven.ext.class.path=/usr/local/netbeans-8.2/java/maven-nblib/netbeans-eventspy.jar
+user.dir=/home/marcosbrasil98/\u00C1rea de Trabalho/LojaVirtual_EJB/DSC_Project_EJB/LojaVirtual_ejb
+localRepository=/home/marcosbrasil98/.m2/repository
+basedir=/home/marcosbrasil98/\u00C1rea de Trabalho/LojaVirtual_EJB/DSC_Project_EJB/LojaVirtual_ejb
+test=softwarecorporativo.ejb.test.ImagemProdutoTest

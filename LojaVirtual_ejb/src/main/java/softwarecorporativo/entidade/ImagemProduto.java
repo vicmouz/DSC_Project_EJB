@@ -35,11 +35,12 @@ import javax.validation.constraints.NotNull;
 @NamedQueries(
         {
             @NamedQuery(
-                    name = "ImagemProduto.PorOutraCor",
-                    query = "SELECT i FROM ImagemProduto i WHERE i.id = :id")
-                        }
+                    name = ImagemProduto.ImagemProdutoPorOutraCor,
+                    query = "SELECT i FROM ImagemProduto i WHERE i.outracor = ?1" )                       }
 )
 public class ImagemProduto extends Entidade implements Serializable {
+  
+ public static final String ImagemProdutoPorOutraCor = "ImagemProdutoPorOutraCor";
    
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
