@@ -27,4 +27,4 @@
 9. Logo após adicionar o "glassfish-resources.xml" do projeto, deve-se reiniciar o Glassfish, espere um pouco e reinicie o console do mesmo
 
 
-> Notepad.pw: https://notepad.pw/c0z8ldy1
+> Notepad.pw:https://notepad.pw/EjbLoja
