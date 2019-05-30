@@ -37,12 +37,15 @@ import javax.validation.Valid;
         {
             @NamedQuery(
                     name = "Pedido.PorLog",
-                    query = "SELECT p FROM Pedido p WHERE p.log LIKE :log ORDER BY p.id")
-            
-            
+                    query = "SELECT p FROM Pedido p WHERE p.log LIKE :log ORDER BY p.id"),
+            @NamedQuery(
+                    name = Pedido.PedidoPorLog,
+                    query = "SELECT p FROM Pedido p WHERE p.log= ?1")
                         }
 )
 public class Pedido extends Entidade implements Serializable{
+    
+ public static final String PedidoPorLog = "PedidoPorLog";
 
 @Id
 @GeneratedValue(strategy =GenerationType.IDENTITY )

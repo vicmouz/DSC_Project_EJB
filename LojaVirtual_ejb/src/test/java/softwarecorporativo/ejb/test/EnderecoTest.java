@@ -52,15 +52,7 @@ public class EnderecoTest extends Teste{
         assertEquals("Avenida Recife", endereco.getNome());
     }
     
-    /*@Test(expected = EJBException.class)
-    public void consultarEnderecoPorCEPInvalido() {
-        try {
-            enderecoservico.consultarPorCEP("222.111.444-98");
-        } catch (EJBException ex) {
-            assertTrue(ex.getCause() instanceof ConstraintViolationException);
-            throw ex;
-        }
-    }*/
+   
     
     @Test
     public void getEnderecoPorId() {
@@ -93,22 +85,16 @@ public class EnderecoTest extends Teste{
         assertEquals("IFPE CITY", endereco.getBairro());
     }
     
-    /*@Test(expected = EJBException.class)
-    public void atualizarInvalido() {
-        EnderecoCliente enderecoCliente = enderecoservico.consultarPorId(new Long(20));
-        enderecoCliente.setCep("073.350.244-54"); //cpf inválido
-        try {
-            enderecoservico.atualizar(enderecoCliente);
-        } catch (EJBException ex) {
-            assertTrue(ex.getCause() instanceof ConstraintViolationException);
-            ConstraintViolationException causa = (ConstraintViolationException) ex.getCause();
-            for (ConstraintViolation erroValidacao : causa.getConstraintViolations()) {
-                assertThat(erroValidacao.getMessage(),
-                        CoreMatchers.anyOf(startsWith("CEP inválido"),
-                                startsWith("o CEP deve estar de acordo com o padrão ")));
-            }
-            throw ex;
-        }
-    } */
+   @Test(expected = EJBException.class)
+    public void atualizarPaisInvalido() {
+        EnderecoCliente endereco = enderecoservico.consultarPorId(new Long(4));
+        
+        
+        endereco.setPais("ZX");
+        
+        enderecoservico.atualizar(endereco);
+        endereco = enderecoservico.consultarPorId(new Long(4));
+        assertEquals("BR", endereco.getPais());
+    }
     
 }

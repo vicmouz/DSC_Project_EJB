@@ -46,7 +46,7 @@ public class TamanhoServico extends Servico<TamanhoProduto>{
         entityManager.persist(tamanho);
     }
     
-    public TamanhoProduto atualizTamanho(TamanhoProduto tamanhoProduto) {
+    public TamanhoProduto atualizarTamanho(TamanhoProduto tamanhoProduto) {
         entityManager.merge(tamanhoProduto);
         entityManager.flush();
         return tamanhoProduto;

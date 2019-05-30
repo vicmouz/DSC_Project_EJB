@@ -37,19 +37,19 @@ public class ImagemProdutoTest extends Teste{
     
     
     
-    /*@Test
+    @Test
     public void existeImagem() {
         ImagemProduto imagem = imagemservico.criar();
-        imagem.setId(new Long(2));
+        imagem.setOutraCor("3 cores");
         assertTrue(imagemservico.existe(imagem));
-    }*/
+    }
     
-    @Test
+    /*@Test
     public void getImagemPorCor() {
         ImagemProduto imagem = imagemservico.consultarPorcor("3 cores");
         assertNotNull(imagem);
         assertEquals("3 cores", imagem.getOutraCor());
-    }
+    }*/
     
    
     
@@ -57,10 +57,10 @@ public class ImagemProdutoTest extends Teste{
     public void getImagemPorId() {
         assertNotNull(imagemservico.consultarPorId(new Long(2)));
     }
-    /*
+    
     @Test
     public void persistir() {   
-         File file = new File("/resources/imagens/camisa_azul.jpg");
+         File file = new File("/resources/imagens/chaveiro_azul.jpeg");
         byte[] bFile = new byte[(int) file.length()];
 
         try {
@@ -76,27 +76,24 @@ public class ImagemProdutoTest extends Teste{
         imagem.setImagem(bFile);
         imagem.setOutraCor("15 cores ");
         
-        CorProduto cor = new CorProduto();
-        cor.setId(8l);
-        cor.setNome("Azul");
-        cor.setTipo("Camisa");
         
-        imagem.setCorImagem(cor);
+        
+        
         imagemservico.persistirImagem(imagem);
         assertNotNull(imagem.getId());
         
     }
-   /* 
+    
     @Test
     public void atualizar() {
         ImagemProduto imagem = imagemservico.consultarPorId(new Long(2));
         imagem.setOutraCor("99 cores"); 
-        imagemservico.atualizar(imagem);
+        imagemservico.atualizarImagem(imagem);
         imagem = imagemservico.consultarPorId(new Long(2));
         assertEquals("99 cores", imagem.getOutraCor());
     }
     
-   */
+   
     
     
     
