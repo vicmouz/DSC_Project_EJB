@@ -102,8 +102,44 @@ public class ClienteTest extends Teste{
         assertEquals("mbf1998@gmail.com", cliente.getEmail());
     }
     
+    @Test
+    public void atualizarPais() {
+        ClienteUsuario cliente = clienteservico.consultarPorId(new Long(4));
+        EnderecoCliente ec = new EnderecoCliente();
+        ec.setNome("Avenida Paulista");
+        ec.setNumero("425");
+        ec.setBairro("São Paulo");
+        ec.setCep("424242442");
+        ec.setCidade("São Paulo");
+        ec.setComplemento("Casa");
+        ec.setEstado("São Paulo");
+        ec.setPais("BR");
+        cliente.setEndereco(ec);
+        clienteservico.atualizar(cliente);
+        cliente = clienteservico.consultarPorId(new Long(4));
+        assertEquals("BR", ec.getPais());
+    }
+    
     @Test(expected = EJBException.class)
-    public void atualizarInvalido() {
+    public void atualizarPaisInvalido() {
+        ClienteUsuario cliente = clienteservico.consultarPorId(new Long(4));
+        EnderecoCliente ec = new EnderecoCliente();
+        ec.setNome("Avenida Paulista");
+        ec.setNumero("425");
+        ec.setBairro("São Paulo");
+        ec.setCep("424242442");
+        ec.setCidade("São Paulo");
+        ec.setComplemento("Casa");
+        ec.setEstado("São Paulo");
+        ec.setPais("ZX");
+        cliente.setEndereco(ec);
+        clienteservico.atualizar(cliente);
+        cliente = clienteservico.consultarPorId(new Long(4));
+        assertEquals("BR", ec.getPais());
+    }
+    
+    @Test(expected = EJBException.class)
+    public void atualizarCPFInvalido() {
         ClienteUsuario cliente = clienteservico.consultarPorId(new Long(4));
         cliente.setCpf("071.322.240-99"); 
         try {

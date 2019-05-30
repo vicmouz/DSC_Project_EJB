@@ -39,7 +39,6 @@ public class ValidadorPais implements ConstraintValidator<ValidaPais, String>{
         int count = 0;
         String nomePais = ler.nextLine();
 
-        System.out.printf("\nConteúdo do arquivo texto:\n");
         try {
             FileReader arq = new FileReader(nomePais);
             BufferedReader lerArq = new BufferedReader(arq);
@@ -49,7 +48,6 @@ public class ValidadorPais implements ConstraintValidator<ValidaPais, String>{
             pais.add(linha);
             count++;
             while (linha != null && count < 249) {
-                System.out.printf("%s\n", linha);
 
                 linha = lerArq.readLine(); // lê da segunda até a última linha
                 linha = linha.substring(0, linha.indexOf("-"));
