@@ -19,11 +19,11 @@ import javax.validation.Payload;
  */
 @Target({ElementType.FIELD, ElementType.METHOD, ElementType.ANNOTATION_TYPE})
 @Retention(RetentionPolicy.RUNTIME)
-@Constraint(validatedBy = ValidadorPais.class)
+@Constraint(validatedBy = ValidadorNomeProduto.class)
 @Documented
-public @interface ValidaPais {
-    String message() default "{softwarecorporativo.entidade.EnderecoCliente.pais}";
+public @interface ValidaNomeProduto {
+    String message() default "{softwarecorporativo.entidade.Produto.nome}";
     
-    Class<?>[] groups() default {};
-    Class<? extends Payload>[] payload() default {};
+    Class<?>[] groups() default  {};
+    Class<? extends Payload>[] payload() default  {};
 }

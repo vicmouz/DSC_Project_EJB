@@ -96,6 +96,15 @@ public class ProdutoTest extends Teste{
         assertEquals("Atualizando", produto.getNome());
     }
     
+    @Test
+    public void atualizarNomeInvalido() {
+        Produto produto = produtoServico.consultarPorID(new Long(2));
+        produto.setNome("Atualiz4ndo");
+        produtoServico.atualizar(produto);
+        produto = produtoServico.consultarPorID(new Long(2));
+        assertEquals("Atualiz4ndo", produto.getNome());
+    }
+    
     /*@Test(expected = EJBException.class)
     public void atualizarInvalido() { //erro assertionError
         Produto produto = produtoServico.consultarPorID(new Long(2));

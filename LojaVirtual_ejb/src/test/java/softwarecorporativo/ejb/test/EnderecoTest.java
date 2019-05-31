@@ -85,16 +85,25 @@ public class EnderecoTest extends Teste{
         assertEquals("IFPE CITY", endereco.getBairro());
     }
     
+    @Test
+    public void atualizarPais() {
+        EnderecoCliente endereco = enderecoservico.consultarPorId(new Long(2));
+        assertNotNull(enderecoservico.consultarPorId(new Long(2)));
+        endereco.setPais(("BR"));
+        assertNotNull(enderecoservico.consultarPorId(new Long(2)));
+        enderecoservico.atualizar(endereco);
+        endereco = enderecoservico.consultarPorId(new Long(2));
+        assertEquals("BR", endereco.getPais());
+        assertNotNull(enderecoservico.consultarPorId(new Long(2)));
+    }
+    
    @Test(expected = EJBException.class)
     public void atualizarPaisInvalido() {
         EnderecoCliente endereco = enderecoservico.consultarPorId(new Long(4));
-        
-        
         endereco.setPais("ZX");
-        
         enderecoservico.atualizar(endereco);
         endereco = enderecoservico.consultarPorId(new Long(4));
-        assertEquals("BR", endereco.getPais());
+        assertEquals("ZX", endereco.getPais());
     }
     
 }
