@@ -29,7 +29,6 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.validation.Valid;
-
 /**
  *
  * @author marcosbrasil98
@@ -69,7 +68,7 @@ public class Produto extends Entidade implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "PRODUTO_ID")
     private Long id;
-
+    
     @NotNull
     @Size(max = 30)
     @Column(name = "PRODUTO_NOME")

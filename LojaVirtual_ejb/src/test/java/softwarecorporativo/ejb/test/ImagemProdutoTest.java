@@ -42,15 +42,7 @@ public class ImagemProdutoTest extends Teste{
         ImagemProduto imagem = imagemservico.criar();
         imagem.setOutraCor("3 cores");
         assertTrue(imagemservico.existe(imagem));
-    }
-    
-    /*@Test
-    public void getImagemPorCor() {
-        ImagemProduto imagem = imagemservico.consultarPorcor("3 cores");
-        assertNotNull(imagem);
-        assertEquals("3 cores", imagem.getOutraCor());
-    }*/
-    
+    }   
    
     
     @Test

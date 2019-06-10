@@ -65,15 +65,5 @@ public class TipoProdutoTest extends Teste{
         
     }
     
-   /* @Test
-    public void atualizar() {
-        TipoProduto tipoproduto = tipoprodutoservico.consultarPorId(new Long(2));
-        tipoproduto.setNome("A"); 
-        tipoprodutoservico.atualizar(tipoproduto);
-        tipoproduto = tipoprodutoservico.consultarPorId(new Long(2));
-        assertEquals("A", tipoproduto.getNome());
-    }
-    
-    */
     }
 

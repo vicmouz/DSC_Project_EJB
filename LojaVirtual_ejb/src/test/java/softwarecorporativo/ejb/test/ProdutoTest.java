@@ -43,36 +43,28 @@ public class ProdutoTest extends Teste{
     }
     
     @Test
-    public void existeProduto() { //funciona
+    public void existeProduto() { 
         Produto produto = produtoServico.criar();
         produto.setId(1l);
         assertTrue(produtoServico.existe(produto));
     }
     
     @Test
-    public void getProdutoPorId() { //funciona
+    public void getProdutoPorId() { 
         Produto produto = produtoServico.consultarPorID(5l);
         assertNotNull(produto);
         assertEquals("Boné Enorme", produto.getNome());
     }
     
-    /*@Test(expected = EJBException.class)
-    public void consultarProdutoPorIdInvalido() { //erro Assertion
-        try {
-           produtoServico.consultarPorID(new Long(23242));
-        } catch (EJBException ex) {
-            assertTrue(ex.getCause() instanceof ConstraintViolationException);
-            throw ex;
-        }
-    }*/
+    
     
     @Test
-    public void getProdutoPorID() { //funciona
+    public void getProdutoPorID() { 
         assertNotNull(produtoServico.consultarPorID(new Long(2)));
     }
     
     @Test
-    public void persistir() { //funciona
+    public void persistir() { 
         Produto produto = produtoServico.criar();
         produto.setNome("Short");
         produto.setPreco(12.5);
@@ -88,7 +80,7 @@ public class ProdutoTest extends Teste{
     }
     
     @Test
-    public void atualizar() { //funciona
+    public void atualizar() { 
         Produto produto = produtoServico.consultarPorID(new Long(2));
         produto.setNome("Atualizando"); 
         produtoServico.atualizar(produto);
@@ -96,32 +88,8 @@ public class ProdutoTest extends Teste{
         assertEquals("Atualizando", produto.getNome());
     }
     
-    @Test
-    public void atualizarNomeInvalido() {
-        Produto produto = produtoServico.consultarPorID(new Long(2));
-        produto.setNome("Atualiz4ndo");
-        produtoServico.atualizar(produto);
-        produto = produtoServico.consultarPorID(new Long(2));
-        assertEquals("Atualiz4ndo", produto.getNome());
-    }
     
-    /*@Test(expected = EJBException.class)
-    public void atualizarInvalido() { //erro assertionError
-        Produto produto = produtoServico.consultarPorID(new Long(2));
-        produto.setQuantidade(30000000); 
-        try {
-            produtoServico.atualizar(produto);
-        } catch (EJBException ex) {
-            assertTrue(ex.getCause() instanceof ConstraintViolationException);
-            ConstraintViolationException causa = (ConstraintViolationException) ex.getCause();
-            for (ConstraintViolation erroValidacao : causa.getConstraintViolations()) {
-                assertThat(erroValidacao.getMessage(),
-                        CoreMatchers.anyOf(startsWith("Quantidade inválida"),
-                                startsWith("A quantidade está errada")));
-            }
-            throw ex;
-        }
-    }*/
+    
 
     public TipoProduto criarTP() {
     TipoProduto tp = new TipoProduto();
