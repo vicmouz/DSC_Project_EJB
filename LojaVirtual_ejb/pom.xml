@@ -12,8 +12,8 @@
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <glassfish.embedded-static-shell.jar>/home/victor/glassfish-4.1.1/glassfish/lib/embedded/glassfish-embedded-static-shell.jar</glassfish.embedded-static-shell.jar>
-        <!--<glassfish.embedded-static-shell.jar>/home/marcosbrasil98/glassfish-4.1.1/glassfish/lib/embedded/glassfish-embedded-static-shell.jar</glassfish.embedded-static-shell.jar>-->
+        <!--<glassfish.embedded-static-shell.jar>/home/victor/glassfish-4.1.1/glassfish/lib/embedded/glassfish-embedded-static-shell.jar</glassfish.embedded-static-shell.jar>-->
+        <glassfish.embedded-static-shell.jar>/home/marcosbrasil98/glassfish-4.1.1/glassfish/lib/embedded/glassfish-embedded-static-shell.jar</glassfish.embedded-static-shell.jar>
    
     </properties>
     
@@ -35,6 +35,12 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.34</version>
+        </dependency>
+        <dependency>
+            <groupId>net.bootsfaces</groupId>
+            <artifactId>bootsfaces</artifactId>
+            <version>0.7.0</version>
+            <scope>compile</scope>
         </dependency>
         <!--dependency>
             <groupId>org.postgresql</groupId>
