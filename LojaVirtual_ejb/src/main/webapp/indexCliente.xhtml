@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Menu cliente</title>
+    </h:head>
+    <h:body>
+        <p:growl id="gro" life="3000"/>
+  <b:navBar brand="Bem vindo #{usuario.nome}" brandHref="indexCliente.xhtml" inverse="true">
+  <b:navbarLinks>
+    <b:navLink icon-awesome="fa-home" value="Início" href="indexCliente.xhtml"></b:navLink>
+    <b:navLink icon-awesome="fa-list" value="Meus pedidos" href="meusPedidos.xhtml"></b:navLink>
+    <b:navLink icon-awesome="fa-edit" value="Editar perfil" href="editarPerfil.xhtml"></b:navLink>
+    <b:navLink iconAwesome="fa-close" style="margin-left: 260px;" value="Sair" href="#"></b:navLink>
+  </b:navbarLinks>
+</b:navBar>
+    </h:body>
+</html>
+

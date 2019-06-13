@@ -61,9 +61,7 @@ private String nome;
 @Column(name = "CORPRODUTO_TIPO")
 private String tipo;
 
-@Valid
-@OneToMany(mappedBy = "corImagem",fetch = FetchType.LAZY,cascade = CascadeType.ALL,orphanRemoval = true)
-private List<ImagemProduto> imagem;
+
 
     public String getTipo() {
         return tipo;
@@ -93,12 +91,6 @@ private List<ImagemProduto> imagem;
 
    
 
-    public List<ImagemProduto> getImagem() {
-        return imagem;
-    }
-
-    public void setImagem(List<ImagemProduto> imagem) {
-        this.imagem = imagem;
-    }
+   
 
 }

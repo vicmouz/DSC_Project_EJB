@@ -59,8 +59,8 @@ private String outracor;
 
 @Valid
 @ManyToOne(fetch = FetchType.LAZY,optional = false)
-@JoinColumn(name = "CORIMAGEM_FK",referencedColumnName = "CORPRODUTO_ID",insertable = true, updatable = true)
-private CorProduto corImagem;
+@JoinColumn(name = "PRODUTOIMAGEM_FK",referencedColumnName = "PRODUTO_ID",insertable = true, updatable = true)
+private Produto produtoImagem;
 
     public Long getId() {
         return id;
@@ -78,12 +78,12 @@ private CorProduto corImagem;
         this.imagem = imagem;
     }
 
-    public CorProduto getCorImagem() {
-        return corImagem;
+    public Produto getProdutoImagem() {
+        return produtoImagem;
     }
 
-    public void setCorImagem(CorProduto corImagem) {
-        this.corImagem = corImagem;
+    public void setProdutoImagem(Produto produtoImagem) {
+        this.produtoImagem = produtoImagem;
     }
 
     public String getOutraCor() {

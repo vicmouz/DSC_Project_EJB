@@ -61,6 +61,7 @@ public class PedidoTest extends Teste {
         Pedido pedido = pedidoServico.criar();
         pedido.setId(7l);
         pedido.setLog("232432knsfksnfs");
+        pedido.setStatus("Entregue");
         pedido.setQuantidade(340);
         pedidoServico.persistirPedido(pedido);
         assertNotNull(pedido.getId());

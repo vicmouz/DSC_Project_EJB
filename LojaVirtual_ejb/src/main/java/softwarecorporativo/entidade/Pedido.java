@@ -61,6 +61,9 @@ private String log;
 @Column(name = "PEDIDO_QUANTIDADE")
 private Integer quantidade; 
 
+@NotNull
+@Column(name = "PEDIDO_STATUS")
+private String status; 
 
 @Valid
 @ManyToOne(fetch = FetchType.LAZY,optional = false)
@@ -117,6 +120,22 @@ public boolean possui(String log){
 
     public void setProduto(List<Produto> produto) {
         this.produto = produto;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public ClienteUsuario getClienteusuario() {
+        return Clienteusuario;
+    }
+
+    public void setClienteusuario(ClienteUsuario Clienteusuario) {
+        this.Clienteusuario = Clienteusuario;
     }
 
 }
