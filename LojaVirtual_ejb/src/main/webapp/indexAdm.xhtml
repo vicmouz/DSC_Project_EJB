@@ -11,10 +11,10 @@
     </h:head>
     <h:body>
         <p:growl id="gro" life="3000"/>
-       <b:navBar brand="Bem vindo #{AdministradorController.nomeUsuario}" brandHref="menuAdm.xhtml" inverse="true">
+       <b:navBar brand="Bem vindo #{AdministradorController.nomeUsuario}" brandHref="indexAdm.xhtml" inverse="true">
   <b:navbarLinks>
     <b:navLink icon-awesome="fa-home" value="Início" href="indexAdm.xhtml"></b:navLink>
-    
+    <b:navLink icon-awesome="fa-list" value="Pedidos" href="pedidosAdm.xhtml"></b:navLink>
       
         
       <b:navLink iconAwesome="fa-close" style="margin-left: 320px;" value="Sair" href="#"></b:navLink>
@@ -25,7 +25,7 @@
         <h:form id="formProd">
             <b:commandButton style="margin-bottom: 10px;" look="primary" value="Inserir Produto" oncomplete="PF('widDialCadProd').show()"
                              update=":dialCadProd" />
-         <b:dataTable value="#{produto.produto}" 
+         <b:dataTable value="#{AdministradorController.produto}" 
            var="p">
     <b:dataTableColumn value="#{p.id}"/>     
     <b:dataTableColumn value="#{p.nome}" />
@@ -114,7 +114,32 @@
   </b:dataTable>
         </h:form><br/><br/>
         
+        <h:form id="formTP">
+            <b:commandButton style="margin-bottom: 10px;" look="primary" value="Inserir tipo de produto" oncomplete="PF('widDialCadTP').show()"
+                             update=":dialCadTP" />
+         <b:dataTable value="#{AdministradorController.tipoProduto}" 
+           var="tp">
+    <b:dataTableColumn value="#{tp.id}"/>     
+    <b:dataTableColumn value="#{tp.nome}" />
+   
+    <b:dataTableColumn label="Operação"  >
+        <b:commandButton icon="glyphicon-pencil" oncomplete="PF('widDialAltTP').show()"
+                                     update=":dialAltTP" title="alterar">
+        <p:tooltip for="@parent"/>
+        <f:setPropertyActionListener target="#{administradorController.selTP}"
+                                                     value="#{item}"/>
+        </b:commandButton>
+        <b:commandButton icon="fa-trash" action="#{administradorController.deletar()}"
+                                     update="@form">
+        <p:confirm message="Deseja realmente deletar este registro" />
+        <f:setPropertyActionListener target="#{administradorController.selTP}"
+                                                     value="#{item}"/>
+        </b:commandButton>
         
+    </b:dataTableColumn>
+   
+  </b:dataTable>
+        </h:form><br/><br/> 
         
         
         
@@ -250,7 +275,25 @@
                                  update="formCor :gro">
                     <p:confirm header="Cadastro" message="Deseja realmente Cadastrar esse registro"/>
                 </b:commandButton></h:form></p:dialog>
-        
+                <p:dialog id="dialCadTP" style="width: 80%; height: 80%;" visible="false" modal="true" widgetVar="widDialCadTP">
+            <h:form style="width: 80%; height: 80%"> 
+                <b:panelGrid columns="2" >
+                    
+                  
+                    
+                    <h:outputText value="Nome do tipo produto"/>
+                    <p:inputText value="#{AdministradorController.tipoProduto.nome}"/>
+                    
+                  
+                    
+                    
+                </b:panelGrid>
+                <b:commandButton style="margin-left:150px; margin-top: 20px" look="primary" value="Inserir" action="#{Administrador.inserirTipoProduto()}"
+                                 oncomplete="PF('widDialCadTP').hide()"
+                                 update="formTP :gro">
+                    <p:confirm header="Cadastro" message="Deseja realmente Cadastrar esse registro"/>
+                </b:commandButton></h:form></p:dialog>
+
         <p:dialog id="dialAltTam" visible="false" modal="true" widgetVar="widDialAltTam">
             <h:form>
                 <b:panelGrid columns="2">

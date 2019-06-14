@@ -2,25 +2,26 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
       xmlns:b="http://bootsfaces.net/ui"
-      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+      xmlns:p="http://primefaces.org/ui">
     <h:head>
-        <title>Meus pedidos</title>
+        <title>Pedidos</title>
     </h:head>
     <h:body>
-        <p:growl id="gro" life="3000"/>
-  <b:navBar brand="Bem vindo Fulano" brandHref="indexCliente.xhtml" inverse="true">
+         <p:growl id="gro" life="3000"/>
+       <b:navBar brand="Bem vindo #{AdministradorController.nomeUsuario}" brandHref="indexAdm.xhtml" inverse="true">
   <b:navbarLinks>
-    <b:navLink icon-awesome="fa-home" value="Início" href="indexCliente.xhtml"></b:navLink>
-    <b:navLink icon-awesome="fa-list" value="Meus pedidos" href="meusPedidos.xhtml"></b:navLink>
-    <b:navLink icon-awesome="fa-edit" value="Editar perfil" href="editarPerfil.xhtml"></b:navLink>
-    <b:navLink icon-awesome="fa-cart-plus" value="Meu carrinho" href="meuCarrinho.xhtml"></b:navLink>
-    <b:navLink iconAwesome="fa-close" style="margin-left: 200px;" value="Sair" href="#"></b:navLink>
-  </b:navbarLinks>
+    <b:navLink icon-awesome="fa-home" value="Início" href="indexAdm.xhtml"></b:navLink>
+    <b:navLink icon-awesome="fa-list" value="Pedidos" href="pedidosAdm.xhtml"></b:navLink>
+      
+        
+      <b:navLink iconAwesome="fa-close" style="margin-left: 320px;" value="Sair" href="#"></b:navLink>
+                   
+    </b:navbarLinks>  
 </b:navBar>
-        <br/><br/>
-        <h:form id="formMeusPedidos">
+       <br/><br/>
+        <h:form id="formPedidos">
             <c:forEach begin="0" end="2" var="a">
                 
                 <b:panel look="primary" title="#logdoPedido" style="width: 50%; margin-left: 25%">
@@ -78,7 +79,9 @@
                         <h:outputText  style="margin-left: 45%;margin-top: 5%; margin-bottom: 5%;" value="Imagem:"/><br/>
                        <!-- <p:graphicImage value="#produto.imagem}"-->
                        <b:image value="https://static.netshoes.com.br/produtos/camisa-bahia-2013-sn-masculina/12/D65-1142-012/D65-1142-012_zoom1.jpg" style="width: 50%; margin-left: 28%"/>
-                        </b:panelGrid>
+                       <b:commandButton look="success" value="Mudar status" style="margin-left: 40%; margin-top: 10%"/>
+                                </b:panelGrid>
+                               
                             </b:panel>
                         </c:forEach>
                     </b:panelGrid>  

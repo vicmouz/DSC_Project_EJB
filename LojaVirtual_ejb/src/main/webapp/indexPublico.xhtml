@@ -3,32 +3,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:b="http://bootsfaces.net/ui"
-      xmlns:p="http://primefaces.org/ui"
       xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
     <h:head>
-        <title>Menu cliente</title>
+        <title>Facelet Title</title>
     </h:head>
     <h:body>
         <p:growl id="gro" life="3000"/>
-  <b:navBar brand="Bem vindo #{usuario.nome}" brandHref="indexCliente.xhtml" inverse="true">
+  <b:navBar brand="Bem vindo !" brandHref="indexPublico.xhtml" inverse="true">
   <b:navbarLinks>
-    <b:navLink icon-awesome="fa-home" value="Início" href="indexCliente.xhtml"></b:navLink>
-    <b:navLink icon-awesome="fa-list" value="Meus pedidos" href="meusPedidos.xhtml"></b:navLink>
-    <b:navLink icon-awesome="fa-edit" value="Editar perfil" href="editarPerfil.xhtml"></b:navLink>
-    <b:navLink icon-awesome="fa-cart-plus" value="Meu carrinho" href="meuCarrinho.xhtml"></b:navLink>
-    <b:navLink iconAwesome="fa-close" style="margin-left: 200px;" value="Sair" href="#"></b:navLink>
-  </b:navbarLinks>
+    <b:navLink icon-awesome="fa-home" value="Início" href="indexPublico.xhtml"></b:navLink>
+    <b:navLink icon-awesome="fa-plus" value="Cadastrar" href="registrarCliente.xhtml"></b:navLink>
+      </b:navbarLinks>
 </b:navBar>
-<b:navBar brand="Produtos" fluid="true">
 
-  <b:navbarLinks>
-      <c:forEach begin="0" end="5">
-          <b:navLink value="NomedoTipoProduto" ></b:navLink>
-      </c:forEach>
-   
-  </b:navbarLinks>
-</b:navBar>
   <b:panelGrid columns="4">    
 
       
@@ -48,7 +37,7 @@
            <f:selectItems value="#{tamanho.nome}" var="d" itemValue="#{d}" itemLabel="Nome da Cor"/>
            </b:selectOneMenu> <br/>
            <b:panelGrid columns="1" style="margin-left: 25%">
-            <b:commandButton value="Colocar no carrinho"  look="primary" /><br/>
+           
            <b:commandButton value="Mais detalhes"  look="danger" />     
            </b:panelGrid>
            </b:panelGrid>
@@ -62,7 +51,7 @@
     
      
 
- </b:panelGrid>    
- </h:body>
+ </b:panelGrid>
+    </h:body>
 </html>
 
