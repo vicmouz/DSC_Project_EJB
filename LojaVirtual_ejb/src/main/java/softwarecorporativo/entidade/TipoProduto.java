@@ -33,13 +33,16 @@ import javax.validation.constraints.NotNull;
             
            @NamedQuery(
                     name = TipoProduto.TipoProdutoPorNome,
-                    query = "SELECT t FROM TipoProduto t WHERE t.nome= ?1")
+                    query = "SELECT t FROM TipoProduto t WHERE t.nome= ?1"),
+           @NamedQuery(
+                    name = TipoProduto.TipoProdutos,
+                    query = "SELECT t FROM TipoProduto t ")
                         }
 )
 public class TipoProduto extends Entidade implements Serializable{
       
  public static final String TipoProdutoPorNome = "TipoProdutoPorNome";
-
+ public static final String TipoProdutos = "TipoProdutos";
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 @Column(name = "TIPOPRODUTO_ID")

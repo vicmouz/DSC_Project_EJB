@@ -44,5 +44,7 @@ public class PedidoBean extends Bean<Pedido> implements Serializable {
     protected void iniciarCampos() {
         pedidoServico.criar();
     }
-    
+     public List<Pedido> getPedidos(){
+        return pedidoServico.getPedidos();
+    }
 }

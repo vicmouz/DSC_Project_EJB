@@ -9,7 +9,9 @@ import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
+import java.util.List;
 import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
 import static javax.ejb.TransactionAttributeType.SUPPORTS;
 import javax.persistence.TypedQuery;
 import javax.validation.constraints.NotNull;
@@ -67,7 +69,9 @@ public class ClienteServico extends Servico<ClienteUsuario> {
     }
     
     @TransactionAttribute(SUPPORTS)
+
     public List<ClienteUsuario> getClientes() {
-        return getEntidades(ClienteUsuario.CLIENTES);
-    }
+        return getEntidades(ClienteUsuario.CLIENTES);}
+
+    
 }

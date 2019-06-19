@@ -47,5 +47,7 @@ public class CorProdutoBean extends Bean<CorProduto> implements Serializable{
     protected void iniciarCampos() {
     corProdutoServico.criar();
     }
-    
+     public List<CorProduto> getCor(){
+        return corProdutoServico.getCores();
+    }
 }

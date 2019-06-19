@@ -5,6 +5,7 @@
  */
 package softwarecorporativo.servico;
 
+import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
@@ -62,4 +63,8 @@ public class ImagemServico extends Servico<ImagemProduto>{
     public ImagemProduto consultarPorcor( String cor) {
         return super.consultarEntidade(new Object[] {cor}, ImagemProduto.ImagemProdutoPorOutraCor);
     }   
+    @TransactionAttribute(SUPPORTS)
+    public List<ImagemProduto> getImagens() {
+        return super.getEntidades(ImagemProduto.imagens);
+    }
 }

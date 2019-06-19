@@ -5,6 +5,7 @@
  */
 package softwarecorporativo.servico;
 
+import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
@@ -56,7 +57,10 @@ public class ProdutoServico extends Servico<Produto> {
     public Produto consultarPorID(@NotNull Long id) {
         return super.consultarEntidade(new Object[] {id}, Produto.ProdutoPorID);
     }
-
+    @TransactionAttribute(SUPPORTS)
+    public List<Produto> getProdutos(){
+        return super.getEntidades(Produto.produtos);}
+      
     // Add business logic below. (Right-click in editor and choose
     // "Insert Code > Add Business Method")
 }

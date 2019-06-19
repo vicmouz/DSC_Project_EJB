@@ -43,5 +43,7 @@ public class ProdutoBean extends Bean<Produto> implements Serializable{
     protected void iniciarCampos() {
     produtoServico.criar();
     }
-    
+    public List<Produto> getProdutos(){
+        return produtoServico.getProdutos();
+    }
 }

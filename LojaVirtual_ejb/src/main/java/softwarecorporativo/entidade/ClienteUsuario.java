@@ -56,16 +56,26 @@ import javax.validation.constraints.Size;
                     name = ClienteUsuario.Clienteporcpf,
                     query = "SELECT a FROM UsuarioGeral a WHERE a.cpf = ?1"
             ),
+
             @NamedQuery(
                     name = ClienteUsuario.CLIENTES,
-                    query = "SELECT c FROM UuarioGeral c WHERE c.usuario_id = ?a"
+                    query = "SELECT c FROM UuarioGeral c WHERE c.usuario_id = ?a"),
+
+             @NamedQuery(
+                    name = ClienteUsuario.clientes,
+                    query = "SELECT a FROM UsuarioGeral a "
+
             )
              
         }
 )
 public class ClienteUsuario extends UsuarioGeral implements Serializable {
 public static final String Clienteporcpf = "Clienteporcpf";
+
 public static final String CLIENTES = "Clientes";
+
+public static final String clientes = "clientes";
+
 
 
 

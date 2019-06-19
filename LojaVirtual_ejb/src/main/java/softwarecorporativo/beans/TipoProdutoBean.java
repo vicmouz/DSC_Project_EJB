@@ -43,5 +43,7 @@ public class TipoProdutoBean extends Bean<TipoProduto> implements Serializable {
     protected void iniciarCampos() {
     tipoProdutoServico.criar();
     }
-    
+    public List<TipoProduto> getTipos(){
+        return tipoProdutoServico.getTipos();
+    }
 }

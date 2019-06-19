@@ -45,5 +45,7 @@ public class ImagemBean extends Bean<ImagemProduto> implements Serializable {
     protected void iniciarCampos() {
        imagemServico.criar();
     }
-    
+     public List<ImagemProduto> getImagens(){
+        return imagemServico.getImagens();
+    }
 }

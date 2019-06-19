@@ -45,5 +45,7 @@ public class TamanhoProdutoBean extends Bean<TamanhoProduto> implements Serializ
     protected void iniciarCampos() {
     tamanhoServico.criar();
     }
-    
+     public List<TamanhoProduto> getTamanhoProdutos(){
+        return tamanhoServico.getTamanhos();
+    }
 }
