@@ -6,11 +6,14 @@
 package softwarecorporativo.beans;
 
 import javax.annotation.PostConstruct;
+import javax.faces.application.FacesMessage;
+import javax.faces.context.FacesContext;
 import softwarecorporativo.entidade.Entidade;
 
 /**
  *
  * @author victor
+ * @param <T>
  */
 public abstract class Bean<T extends Entidade> {
 
@@ -40,8 +43,43 @@ public abstract class Bean<T extends Entidade> {
     public void salvar() {
         try{
             boolean sucesso = salvar(entidade);
+            if (sucesso) {
+                adicionarMensagem(FacesMessage.SEVERITY_INFO, "Cadastro realizado com sucesso!");
+            }
+        } catch (Exception ex) {
+            adicionarMensagem(FacesMessage.SEVERITY_WARN, "Ocorreu um erro!");
+        } finally {
+            iniciarCampos();
         }
     }
     
+    public void atualizar() {
+        try {
+            boolean sucesso = atualizar(entidade);
+            if(sucesso) {
+                adicionarMensagem(FacesMessage.SEVERITY_INFO, "Alteração realizada com sucesso!");
+            }
+        } catch (Exception ex) {
+            adicionarMensagem(FacesMessage.SEVERITY_WARN, "Ocorreu um erro!");
+        } finally {
+            
+        }
+    }
     
+    public void deletar() {
+        try {
+            boolean sucesso = deletar(entidade);
+            if (sucesso) {
+                adicionarMensagem(FacesMessage.SEVERITY_INFO, "Exclusão realizada com sucesso!");
+            }
+        } catch (Exception ex) {
+            adicionarMensagem(FacesMessage.SEVERITY_WARN, "Ocorreu um erro");
+        }
+    }
+    
+    protected void adicionarMensagem(FacesMessage.Severity severity, String mensagem) {
+        FacesMessage message = new FacesMessage(severity, mensagem, null);
+        FacesContext.getCurrentInstance().getExternalContext().getFlash().setKeepMessages(true);
+        FacesContext.getCurrentInstance().addMessage(null, message);
+    }
 }
