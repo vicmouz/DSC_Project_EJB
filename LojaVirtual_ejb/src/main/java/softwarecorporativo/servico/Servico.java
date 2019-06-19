@@ -62,6 +62,7 @@ public abstract class Servico<T extends Entidade> {
         return entidade;
     }
     
+
     public void deletar(@Valid T entidade) {
         if (existe(entidade)) {
             T ems = entityManager.merge(entidade);
@@ -69,6 +70,7 @@ public abstract class Servico<T extends Entidade> {
             entityManager.flush();
         }
     }
+
 
     @TransactionAttribute(SUPPORTS)
     public T consultarPorId(@NotNull Long id) {

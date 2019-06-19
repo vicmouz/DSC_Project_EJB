@@ -51,7 +51,13 @@ public class EnderecoServico extends Servico<EnderecoCliente>{
         entityManager.flush();
         return endereco;
     }
-    
+      public void deletar(EnderecoCliente enderecoCliente){
+         if (existe(enderecoCliente)) {
+           EnderecoCliente endereco = entityManager.merge(enderecoCliente);
+            entityManager.remove(endereco);
+            entityManager.flush();
+        }
+   }
     @TransactionAttribute(SUPPORTS)
     public EnderecoCliente consultarPorCEP( String cpf) {
         return super.consultarEntidade(new Object[] {cpf}, EnderecoCliente.EnderecoPorCep);

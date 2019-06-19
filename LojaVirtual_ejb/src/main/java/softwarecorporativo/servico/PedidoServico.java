@@ -51,7 +51,13 @@ public class PedidoServico extends Servico<Pedido> {
         entityManager.flush();
         return pedido;
     }
-    
+      public void deletar(Pedido pedido){
+         if (existe(pedido)) {
+           Pedido ped = entityManager.merge(pedido);
+            entityManager.remove(ped);
+            entityManager.flush();
+        }
+   }
     @TransactionAttribute(SUPPORTS)
     public Pedido consultarPorLog( String log) {
         return super.consultarEntidade(new Object[] {log}, Pedido.PedidoPorLog);

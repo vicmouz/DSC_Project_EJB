@@ -51,7 +51,13 @@ public class CorProdutoServico extends Servico<CorProduto>{
         entityManager.flush();
         return corProduto;
     }
-    
+      public void deletar(CorProduto corProduto){
+         if (existe(corProduto)) {
+           CorProduto cor = entityManager.merge(corProduto);
+            entityManager.remove(cor);
+            entityManager.flush();
+        }
+   }
     @TransactionAttribute(SUPPORTS)
     public CorProduto consultarPorTipo( String tipo) {
         return super.consultarEntidade(new Object[] {tipo}, CorProduto.CorPorTipo);

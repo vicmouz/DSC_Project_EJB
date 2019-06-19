@@ -51,7 +51,13 @@ public class TamanhoServico extends Servico<TamanhoProduto>{
         entityManager.flush();
         return tamanhoProduto;
     }
-    
+      public void deletar(TamanhoProduto tamanhoProduto){
+         if (existe(tamanhoProduto)) {
+           TamanhoProduto tamanho = entityManager.merge(tamanhoProduto);
+            entityManager.remove(tamanho);
+            entityManager.flush();
+        }
+   }
     @TransactionAttribute(SUPPORTS)
     public TamanhoProduto consultarPorTipo( String tipo) {
         return super.consultarEntidade(new Object[] {tipo}, TamanhoProduto.TamanhoProdutoPorTipo);

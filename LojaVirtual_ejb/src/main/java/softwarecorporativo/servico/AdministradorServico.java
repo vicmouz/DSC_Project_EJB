@@ -35,6 +35,14 @@ public class AdministradorServico extends Servico<Administrador> {
     public Administrador criar() {
         return new Administrador();
     }
+   
+   public void deletar(Administrador administrador){
+         if (existe(administrador)) {
+           Administrador adm = entityManager.merge(administrador);
+            entityManager.remove(adm);
+            entityManager.flush();
+        }
+   }
     
     @Override
     public boolean existe(@NotNull Administrador administrador) {
@@ -57,4 +65,6 @@ public class AdministradorServico extends Servico<Administrador> {
     public Administrador consultarPorCPF(@CPF String cpf) {
         return super.consultarEntidade(new Object[] {cpf}, Administrador.AdministradorPorCPF);
     }
+    
+    
 }
