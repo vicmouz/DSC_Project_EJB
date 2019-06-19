@@ -11,10 +11,11 @@
     </h:head>
     <h:body>
         <p:growl id="gro" life="3000"/>
-        <b:navBar brand="Bem vindo, visitante!" inverse="true">
+        <b:navBar brand="Bem vindo, visitante!" brandHref="#" inverse="true">
             <b:navbarLinks>
-                <b:navLink icon-awesome="fa-home" value="Início" href="faces/publico/indexPublico.xhtml"></b:navLink>
-                <b:navLink icon-awesome="fa-plus" value="Cadastrar" href="faces/publico/registrarCliente.xhtml"></b:navLink>
+                <b:navLink icon-awesome="fa-home" value="Início" href="/faces/publico/indexPublico.xhtml"></b:navLink>
+                <b:navLink icon-awesome="fa-plus" value="Cadastrar" href="/faces/publico/registrarCliente.xhtml"></b:navLink>
+                <b:navLink icon-awesome="fa-sign" value="Login" href="/faces/publico/login.xhtml" style="float: right"></b:navLink>
             </b:navbarLinks>
         </b:navBar>
 
