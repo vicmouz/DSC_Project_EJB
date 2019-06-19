@@ -27,19 +27,20 @@ public class EnderecoBean extends Bean<EnderecoCliente> implements Serializable 
 private List<EnderecoCliente> enderecos;
     @Override
     protected boolean salvar(EnderecoCliente entidade) {
-        enderecoServico.persistir(entidade);
+        enderecoServico.persistirEndereco(entidade);
         return true;
        }
 
     @Override
     protected boolean atualizar(EnderecoCliente entidade) {
-       enderecoServico.atualizar(entidade);
+       enderecoServico.atualizarEndereco(entidade);
        return true;
     }
 
     @Override
     protected boolean deletar(EnderecoCliente entidade) {
-      return true;
+        enderecoServico.deletar(entidade);
+        return true;
     }
 
     @Override

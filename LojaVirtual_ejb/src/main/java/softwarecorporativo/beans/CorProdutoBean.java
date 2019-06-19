@@ -27,18 +27,19 @@ public class CorProdutoBean extends Bean<CorProduto> implements Serializable{
 
     @Override
     protected boolean salvar(CorProduto entidade) {
-        corProdutoServico.persistir(entidade);
+        corProdutoServico.persistirCorProduto(entidade);
         return true; 
     }
 
     @Override
     protected boolean atualizar(CorProduto entidade) {
-        corProdutoServico.atualizar(entidade);
+        corProdutoServico.atualizarCor(entidade);
         return true;
     }
 
     @Override
     protected boolean deletar(CorProduto entidade) {
+       corProdutoServico.deletar(entidade);
        return true;
     }
 

@@ -25,19 +25,19 @@ public class AdministradorBean extends Bean<Administrador> implements Serializab
 private List<Administrador> administradores;
     @Override
     protected boolean salvar(Administrador entidade) {
-       administradorServico.persistir(entidade);
+       administradorServico.persistirAdministrador(entidade);
        return true;
     }
 
     @Override
     protected boolean atualizar(Administrador entidade) {
-       administradorServico.atualizar(entidade);
+       administradorServico.atualizarAdministrador(entidade);
        return true;
     }
 
     @Override
     protected boolean deletar(Administrador entidade) {
-    //  administradorServico.
+    administradorServico.deletar(entidade);
     return true;
     }
 

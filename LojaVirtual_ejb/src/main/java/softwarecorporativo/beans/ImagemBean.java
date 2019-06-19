@@ -25,19 +25,20 @@ public class ImagemBean extends Bean<ImagemProduto> implements Serializable {
     
     @Override
     protected boolean salvar(ImagemProduto entidade) {
-     imagemServico.persistir(entidade);
+     imagemServico.persistirImagem(entidade);
      return true;
     }
 
     @Override
     protected boolean atualizar(ImagemProduto entidade) {
-    imagemServico.atualizar(entidade);
+    imagemServico.atualizarImagem(entidade);
     return true;
     }
 
     @Override
     protected boolean deletar(ImagemProduto entidade) {
-    return true;
+       imagemServico.deletar(entidade);
+        return true;
     }
 
     @Override

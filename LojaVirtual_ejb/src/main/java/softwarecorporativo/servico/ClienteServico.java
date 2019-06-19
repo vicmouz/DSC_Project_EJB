@@ -52,6 +52,13 @@ public class ClienteServico extends Servico<ClienteUsuario> {
         entityManager.flush();
         return cliente;
     }
+      public void deletar(ClienteUsuario clienteUsuario){
+         if (existe(clienteUsuario)) {
+           ClienteUsuario cliente = entityManager.merge(clienteUsuario);
+            entityManager.remove(cliente);
+            entityManager.flush();
+        }
+   }
     
     @TransactionAttribute(SUPPORTS)
     public ClienteUsuario consultarPorCPF(@CPF String cpf) {

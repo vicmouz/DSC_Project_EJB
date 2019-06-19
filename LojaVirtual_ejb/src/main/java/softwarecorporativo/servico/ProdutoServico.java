@@ -45,7 +45,13 @@ public class ProdutoServico extends Servico<Produto> {
     public void persistirProduto(Produto produto) {
         entityManager.persist(produto);
     }
-    
+      public void deletar(Produto produto){
+         if (existe(produto)) {
+           Produto prod = entityManager.merge(produto);
+            entityManager.remove(prod);
+            entityManager.flush();
+        }
+   }
     @TransactionAttribute(SUPPORTS)
     public Produto consultarPorID(@NotNull Long id) {
         return super.consultarEntidade(new Object[] {id}, Produto.ProdutoPorID);

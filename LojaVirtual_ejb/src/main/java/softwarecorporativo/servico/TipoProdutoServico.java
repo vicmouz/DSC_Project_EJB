@@ -52,6 +52,13 @@ public class TipoProdutoServico extends Servico<TipoProduto> {
         entityManager.flush();
         return tipoProduto;
     }
+      public void deletar(TipoProduto tipoProduto){
+         if (existe(tipoProduto)) {
+           TipoProduto tipo = entityManager.merge(tipoProduto);
+            entityManager.remove(tipo);
+            entityManager.flush();
+        }
+   }
     @TransactionAttribute(SUPPORTS)
     public TipoProduto consultarPorNome(String nome) {
         return super.consultarEntidade(new Object[] {nome}, TipoProduto.TipoProdutoPorNome);

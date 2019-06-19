@@ -18,5 +18,31 @@ import javax.inject.Named;
 @RequestScoped
 @Named(value = "PedidoBean")
 public class PedidoBean extends Bean<Pedido> implements Serializable {
+
+    private PedidoServico pedidoServico;
+    private List<Pedido> pedidos;
+    
+    @Override
+    protected boolean salvar(Pedido entidade) {
+      pedidoServico.persistirPedido(entidade);
+      return true;
+    }
+
+    @Override
+    protected boolean atualizar(Pedido entidade) {
+       pedidoServico.atualizarPedido(entidade);
+       return true;
+    }
+
+    @Override
+    protected boolean deletar(Pedido entidade) {
+      pedidoServico.deletar(entidade);
+      return true;
+    }
+
+    @Override
+    protected void iniciarCampos() {
+        pedidoServico.criar();
+    }
     
 }

@@ -51,7 +51,13 @@ public class ImagemServico extends Servico<ImagemProduto>{
         entityManager.flush();
         return imagemProduto;
     }
-    
+      public void deletar(ImagemProduto imagemProduto){
+         if (existe(imagemProduto)) {
+           ImagemProduto imagem = entityManager.merge(imagemProduto);
+            entityManager.remove(imagem);
+            entityManager.flush();
+        }
+   }
     @TransactionAttribute(SUPPORTS)
     public ImagemProduto consultarPorcor( String cor) {
         return super.consultarEntidade(new Object[] {cor}, ImagemProduto.ImagemProdutoPorOutraCor);
