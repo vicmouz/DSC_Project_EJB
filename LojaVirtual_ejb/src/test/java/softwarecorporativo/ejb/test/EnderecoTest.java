@@ -96,7 +96,7 @@ public class EnderecoTest extends Teste{
         assertEquals("BR", endereco.getPais());
         assertNotNull(enderecoservico.consultarPorId(new Long(2)));
     }
-    
+    /*
    @Test(expected = EJBException.class)
     public void atualizarPaisInvalido() {
         EnderecoCliente endereco = enderecoservico.consultarPorId(new Long(4));
@@ -105,5 +105,5 @@ public class EnderecoTest extends Teste{
         endereco = enderecoservico.consultarPorId(new Long(4));
         assertEquals("ZX", endereco.getPais());
     }
-    
+    */
 }

@@ -5,12 +5,17 @@
  */
 package softwarecorporativo.beans;
 
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
+import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import softwarecorporativo.entidade.ClienteUsuario;
+import softwarecorporativo.entidade.EnderecoCliente;
 import softwarecorporativo.servico.ClienteServico;
 
 /**
@@ -23,13 +28,45 @@ public class ClienteBean extends Bean<ClienteUsuario> implements Serializable {
 
     @Inject
     private ClienteServico clienteServico;
-
+    private EnderecoCliente enderecoCliente = new EnderecoCliente();
     private List<ClienteUsuario> clientes;
 
+    public ClienteServico getClienteServico() {
+        return clienteServico;
+    }
+
+    public void setClienteServico(ClienteServico clienteServico) {
+        this.clienteServico = clienteServico;
+    }
+
+    public EnderecoCliente getEnderecoCliente() {
+        return enderecoCliente;
+    }
+
+    public void setEnderecoCliente(EnderecoCliente enderecoCliente) {
+        this.enderecoCliente = enderecoCliente;
+    }
+
+    public List<ClienteUsuario> getClientes() {
+        return clientes;
+    }
+
+    public void setClientes(List<ClienteUsuario> clientes) {
+        this.clientes = clientes;
+    }
+
+    
     @Override
     protected boolean salvar(ClienteUsuario entidade) {
+        
+        
+            entidade.setEndereco(enderecoCliente);
         clienteServico.persistirCliente(entidade);
-        return true;
+           
+            return true;
+       
+   
+        
     }
 
     @Override

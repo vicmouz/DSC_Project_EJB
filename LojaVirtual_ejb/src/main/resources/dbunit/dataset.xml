@@ -31,9 +31,9 @@
     <TB_CORPRODUTO num_versao="1" corproduto_id="4" corproduto_nome="Amarelo"  corproduto_tipo="Camisa"/>
     <TB_CORPRODUTO num_versao="1" corproduto_id="5" corproduto_nome="Marrom"  corproduto_tipo="Boné" />
 
-   <TB_IMGPRODUTO num_versao="1" imgproduto_id="2" produtoimagem_fk="2" imgproduto_outracor="3 cores"/>
-   <TB_IMGPRODUTO num_versao="1" imgproduto_id="3" produtoimagem_fk="3" imgproduto_outracor="4 cores"/>
-   <TB_IMGPRODUTO num_versao="1" imgproduto_id="4" produtoimagem_fk="4" imgproduto_outracor="12 cores"/>
+   <TB_IMGPRODUTO num_versao="1" imgproduto_id="2" corimagem_fk="2" imgproduto_outracor="3 cores"/>
+   <TB_IMGPRODUTO num_versao="1" imgproduto_id="3" corimagem_fk="3" imgproduto_outracor="4 cores"/>
+   <TB_IMGPRODUTO num_versao="1" imgproduto_id="4" corimagem_fk="4" imgproduto_outracor="12 cores"/>
    
     <TB_PRODUTO_COR produto_id="1" corproduto_id="2"/>
     <TB_PRODUTO_COR produto_id="4" corproduto_id="4"/>
@@ -53,22 +53,22 @@
     endereco_complemento="Viaduto" endereco_bairro="Boa Vista" endereco_cidade="Olinda" endereco_cep="11111"
     endereco_estado="PE" endereco_pais="BR"/>
     
-    <TB_USUARIOGERAL num_versao="1" usuario_id="1" usuario_cpf="829.339.430-77" usuario_nome="Jukes da Silva" usuario_email="jk@gmail.com" usuario_tipo="C" usuario_senha="oi"/>
-    <TB_USUARIOGERAL num_versao="1" usuario_id="2" usuario_cpf="884.250.750-41" usuario_nome="Rakin de Paula" usuario_email="rp@gmail.com" usuario_tipo="A" usuario_senha="nada"/>
-    <TB_USUARIOGERAL num_versao="1" usuario_id="3" usuario_cpf="083.843.220-40" usuario_nome="Jovirone Franco" usuario_email="jf@gmail.com" usuario_tipo="A" usuario_senha="seila"/>
-    <TB_USUARIOGERAL num_versao="1" usuario_id="4" usuario_cpf="767.170.840-22" usuario_nome="4lan" usuario_email="4lan@gmail.com" usuario_tipo="C" usuario_senha="teste"/>
-    <TB_USUARIOGERAL num_versao="1" usuario_id="5" usuario_cpf="145.207.020-20" usuario_nome="Kami Maria José" usuario_email="kmj@gmail.com" usuario_tipo="C" usuario_senha="naosei"/>
-    <TB_USUARIOGERAL num_versao="1" usuario_id="6" usuario_cpf="366.185.710-06" usuario_nome="Toboco" usuario_email="toboco@gmail.com" usuario_tipo="A" usuario_senha="aprovacao"/>
+    <TB_USUARIOGERAL num_versao="1" usuario_id="1" usuario_cpf="829.339.430-77" usuario_nome="Jukes da Silva" usuario_email="jk@gmail.com" usuario_tipo="C"/>
+    <TB_USUARIOGERAL num_versao="1" usuario_id="2" usuario_cpf="884.250.750-41" usuario_nome="Rakin de Paula" usuario_email="rp@gmail.com" usuario_tipo="A"/>
+    <TB_USUARIOGERAL num_versao="1" usuario_id="3" usuario_cpf="083.843.220-40" usuario_nome="Jovirone Franco" usuario_email="jf@gmail.com" usuario_tipo="A"/>
+    <TB_USUARIOGERAL num_versao="1" usuario_id="4" usuario_cpf="767.170.840-22" usuario_nome="4lan" usuario_email="4lan@gmail.com" usuario_tipo="C"/>
+    <TB_USUARIOGERAL num_versao="1" usuario_id="5" usuario_cpf="145.207.020-20" usuario_nome="Kami Maria José" usuario_email="kmj@gmail.com" usuario_tipo="C"/>
+    <TB_USUARIOGERAL num_versao="1" usuario_id="6" usuario_cpf="366.185.710-06" usuario_nome="Toboco" usuario_email="toboco@gmail.com" usuario_tipo="A"/>
 
     <TB_ADMUSUARIO usuario_id="2" adm_permissao="Concedida"/>
     <TB_ADMUSUARIO usuario_id="3" adm_permissao="Não Concebida"/>
     <TB_ADMUSUARIO usuario_id="6" adm_permissao="Concedida"/>
     
-    <TB_PEDIDO num_versao="1" pedido_id="1" pedido_status="Entregue" pedido_log="rqqw4qw42" pedido_quantidade="323"/>
-    <TB_PEDIDO num_versao="1" pedido_id="2" pedido_status="Entregue" pedido_log="232323232" pedido_quantidade="200"/>
-    <TB_PEDIDO num_versao="1" pedido_id="3" pedido_status="Entregue" pedido_log="fsfs42352" pedido_quantidade="1"/>
-    <TB_PEDIDO num_versao="1" pedido_id="4" pedido_status="Entregue" pedido_log="fsfs64647" pedido_quantidade="25"/>
-    <TB_PEDIDO num_versao="1" pedido_id="5" pedido_status="Entregue" pedido_log="nff979767" pedido_quantidade="100"/>
+    <TB_PEDIDO num_versao="1" pedido_id="1" pedido_log="rqqw4qw42" pedido_quantidade="323"/>
+    <TB_PEDIDO num_versao="1" pedido_id="2" pedido_log="232323232" pedido_quantidade="200"/>
+    <TB_PEDIDO num_versao="1" pedido_id="3" pedido_log="fsfs42352" pedido_quantidade="1"/>
+    <TB_PEDIDO num_versao="1" pedido_id="4" pedido_log="fsfs64647" pedido_quantidade="25"/>
+    <TB_PEDIDO num_versao="1" pedido_id="5" pedido_log="nff979767" pedido_quantidade="100"/>
 
     <TB_PEDIDO_PRODUTO pedido_id="1" produto_id="1"/>
     <TB_PEDIDO_PRODUTO pedido_id="1" produto_id="3"/>

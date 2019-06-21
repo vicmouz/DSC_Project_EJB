@@ -24,7 +24,6 @@ import javax.persistence.NamedNativeQueries;
 import javax.persistence.NamedNativeQuery;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
@@ -49,7 +48,7 @@ import javax.validation.Valid;
             ),
             @NamedQuery(
                     name = Produto.produtos,
-                    query = "SELECT p FROM Produto p"
+                    query = "SELECT p FROM Produto p "
             )
         }
 )
@@ -115,10 +114,6 @@ public class Produto extends Entidade implements Serializable {
                 @JoinColumn(name = "CORPRODUTO_ID")})
     private List<CorProduto> cor;
 
-    @Valid
-    @OneToMany(mappedBy = "produtoImagem",fetch = FetchType.LAZY,cascade = CascadeType.ALL,orphanRemoval = true)
-    private List<ImagemProduto> imagem;
-    
     public boolean possui(String nome) {
         return nome.contains(nome);
     }
@@ -186,11 +181,5 @@ public class Produto extends Entidade implements Serializable {
     public void setCor(List<CorProduto> cor) {
         this.cor = cor;
     }
-    public List<ImagemProduto> getImagem() {
-        return imagem;
-    }
 
-    public void setImagem(List<ImagemProduto> imagem) {
-        this.imagem = imagem;
-    }
 }

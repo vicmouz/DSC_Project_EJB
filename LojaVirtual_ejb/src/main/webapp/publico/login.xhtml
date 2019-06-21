@@ -9,69 +9,32 @@
         <title>Login</title>
     </h:head>
     <h:body>
-        <c:if test="#{login.pessoaLogada!= null}">
-            <script>
-                location.href = "faces/publico/login.xhtml";
-            </script>
-        </c:if>
+       
+       
         <div align="center">
             <h:form><br/><br/><br/>
                 <p:panelGrid columns="2"  >
 
                     <h:outputText value="Email"/>
-                    <b:inputText mask="email" value="#{loginController.login.email}"/>
+                    <b:inputText value="#LoginBean.usuario}"/>
 
-                    <h:outputText value="Senha"/>
-                    <b:inputSecret value="#{loginController.login.senha}"
+                    <h:outputText value="CPF"/>
+                    <b:inputSecret value="#LoginBean.cpf}"
                                    />
 
 
                 </p:panelGrid><br/>
 
-                <b:commandButton style="margin-right: 15px; margin-left: 20px" look="primary" value="Logar" size="lg" action="#{login.LogarPessoa(login)}"
-                                 />
+                <b:commandButton style="margin-right: 15px; margin-left: 20px" look="primary" value="Logar Cliente" size="lg" action="#LoginBean.loginCliente(LoginBean.usuario,LoginBean.cpf)}"/>
+                                 
+               
+                <b:commandButton style="margin-right: 15px; margin-left: 20px" look="primary" value="Logar ADM" size="lg" action="#LoginBean.loginADM(LoginBean.usuario,LoginBean.cpf)}"/>
+                                 
+                
 
-
-                <b:commandButton look="warning" value="Cadastrar" size="lg" action="faces/publico/registrarCliente.xhtml"
-
-                                 >
-
-                </b:commandButton>
-
-                <br/>
-                <b:commandButton style="margin-right:30px; margin-left: 20px" look="link" value="Esqueceu a senha" size="lg"
-                                 oncomplete="PF('widDialLoginEsqueceu').show()"
-                                 update="dialEsqueceu"/>
-
-                <p:dialog id="dialEsqueceu" visible="false" modal="true" widgetVar="widDialLoginEsqueceu">
-                    <h:form style="width: 80%; height: 80%">
-
-                        <h:outputText value="Email:"/>
-                        <b:inputText id="txtEmail" value="#{loginE.email}" 
-                                     required="true"
-                                     required-message="Email é obrigatório" />
-                        <b:message for="txtEmail"/>
-
-                        <h:outputText value="CPF:"/>
-                        <b:inputText id="txtCPF" value="#{loginE.cpf}" 
-                                     required="true"
-                                     required-message="CPF é obrigatório" />
-                        <b:message for="txtCPF"/>
-                        <h:outputText value="Senha:"/>
-                        <b:inputSecret id="txtSenha" value="#{loginE.senha}" 
-                                       required="true"
-                                       required-message="Senha é obrigatória" />
-                        <b:message for="txtSenha"/>
-
-                        <h:outputText value="Confirma Senha:"/>
-                        <b:inputSecret id="txtconf" value="#{confirma}" 
-                                       required="true"
-                                       required-message="Senha é obrigatória" />
-                        <b:message for="txtConf"/>
-                        <b:commandButton look="primary" style="margin-left: 10px; margin-top: 15px;" value="Validar" action="#{loginController.validar(loginE,confirma)}"
-                                         />
-                    </h:form>
-                </p:dialog>   
+             
+              
+               
             </h:form>
 
         </div>

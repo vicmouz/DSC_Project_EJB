@@ -36,7 +36,7 @@ import javax.validation.constraints.NotNull;
                     query = "SELECT t FROM TipoProduto t WHERE t.nome= ?1"),
            @NamedQuery(
                     name = TipoProduto.TipoProdutos,
-                    query = "SELECT t FROM TipoProduto t ")
+                    query = "SELECT t FROM TipoProduto t")
                         }
 )
 public class TipoProduto extends Entidade implements Serializable{

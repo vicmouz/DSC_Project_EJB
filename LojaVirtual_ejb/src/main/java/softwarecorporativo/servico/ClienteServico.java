@@ -19,6 +19,7 @@ import javax.validation.executable.ExecutableType;
 import javax.validation.executable.ValidateOnExecution;
 import org.hibernate.validator.constraints.br.CPF;
 import softwarecorporativo.entidade.ClienteUsuario;
+import softwarecorporativo.entidade.EnderecoCliente;
 
 /**
  *
@@ -36,7 +37,9 @@ public class ClienteServico extends Servico<ClienteUsuario> {
 
     @Override
     public ClienteUsuario criar() {
-        return new ClienteUsuario();
+        ClienteUsuario cliente = new ClienteUsuario();
+        cliente.setEndereco(new EnderecoCliente());
+        return cliente;
     }
     
     @Override

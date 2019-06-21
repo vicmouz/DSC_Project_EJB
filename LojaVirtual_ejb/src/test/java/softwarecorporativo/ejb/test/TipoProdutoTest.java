@@ -52,7 +52,7 @@ public class TipoProdutoTest extends Teste{
       
     @Test
     public void getTipoProdutoPorId() {
-        assertNotNull(tipoprodutoservico.consultarPorId(new Long(3)));
+        assertNotNull(tipoprodutoservico.consultarPorId(new Long(219)));
     }
     
     @Test

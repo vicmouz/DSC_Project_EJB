@@ -43,9 +43,9 @@ import org.hibernate.validator.constraints.NotBlank;
             @NamedQuery(
                     name = CorProduto.CorPorTipo,
                     query = "SELECT c FROM CorProduto c WHERE c.tipo= ?1"),
-             @NamedQuery(
+            @NamedQuery(
                     name = CorProduto.cores,
-                    query = "SELECT c FROM CorProduto c")
+                    query = "SELECT c FROM CorProduto c ")
                         }
 )
 public class CorProduto extends Entidade implements Serializable{
@@ -64,7 +64,9 @@ private String nome;
 @Column(name = "CORPRODUTO_TIPO")
 private String tipo;
 
-
+@Valid
+@OneToMany(mappedBy = "corImagem",fetch = FetchType.LAZY,cascade = CascadeType.ALL,orphanRemoval = true)
+private List<ImagemProduto> imagem;
 
     public String getTipo() {
         return tipo;
@@ -94,6 +96,12 @@ private String tipo;
 
    
 
-   
+    public List<ImagemProduto> getImagem() {
+        return imagem;
+    }
+
+    public void setImagem(List<ImagemProduto> imagem) {
+        this.imagem = imagem;
+    }
 
 }

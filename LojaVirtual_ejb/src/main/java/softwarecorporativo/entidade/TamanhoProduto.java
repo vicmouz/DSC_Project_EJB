@@ -38,7 +38,7 @@ import org.hibernate.validator.constraints.NotEmpty;
             @NamedQuery(
                     name = TamanhoProduto.TamanhoProdutoPorTipo,
                     query = "SELECT t FROM TamanhoProduto t WHERE t.tipo= ?1"),
-               @NamedQuery(
+              @NamedQuery(
                     name = TamanhoProduto.tamanhos,
                     query = "SELECT t FROM TamanhoProduto t ")
            

@@ -41,7 +41,7 @@ import javax.validation.Valid;
             @NamedQuery(
                     name = Pedido.PedidoPorLog,
                     query = "SELECT p FROM Pedido p WHERE p.log= ?1"),
-            @NamedQuery(
+             @NamedQuery(
                     name = Pedido.pedidos,
                     query = "SELECT p FROM Pedido p ")
                         }
@@ -49,7 +49,7 @@ import javax.validation.Valid;
 public class Pedido extends Entidade implements Serializable{
     
  public static final String PedidoPorLog = "PedidoPorLog";
- public static final String pedidos = "pedidos";
+public static final String pedidos = "pedidos";
 @Id
 @GeneratedValue(strategy =GenerationType.IDENTITY )
 @Column(name = "PEDIDO_ID",nullable = false)
@@ -64,9 +64,6 @@ private String log;
 @Column(name = "PEDIDO_QUANTIDADE")
 private Integer quantidade; 
 
-@NotNull
-@Column(name = "PEDIDO_STATUS")
-private String status; 
 
 @Valid
 @ManyToOne(fetch = FetchType.LAZY,optional = false)
@@ -123,22 +120,6 @@ public boolean possui(String log){
 
     public void setProduto(List<Produto> produto) {
         this.produto = produto;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public ClienteUsuario getClienteusuario() {
-        return Clienteusuario;
-    }
-
-    public void setClienteusuario(ClienteUsuario Clienteusuario) {
-        this.Clienteusuario = Clienteusuario;
     }
 
 }

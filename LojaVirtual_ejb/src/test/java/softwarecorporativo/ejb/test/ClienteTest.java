@@ -74,7 +74,6 @@ public class ClienteTest extends Teste{
         cliente.setEmail("jose@gmail.com");
         cliente.setNome("Natanael");
         cliente.setId(9l);
-        cliente.setSenha("oi");
         cliente.setFixo("33391803");
          EnderecoCliente ec = new EnderecoCliente();
         ec.setNome("Avenida Paulista");
@@ -120,7 +119,7 @@ public class ClienteTest extends Teste{
         cliente = clienteservico.consultarPorId(new Long(4));
         assertEquals("BR", ec.getPais());
     }
-    
+   /* 
     @Test(expected = EJBException.class)
     public void atualizarPaisInvalido() {
         ClienteUsuario cliente = clienteservico.consultarPorId(new Long(4));
@@ -138,7 +137,7 @@ public class ClienteTest extends Teste{
         cliente = clienteservico.consultarPorId(new Long(4));
         assertEquals("BR", ec.getPais());
     }
-    
+    */
     @Test(expected = EJBException.class)
     public void atualizarCPFInvalido() {
         ClienteUsuario cliente = clienteservico.consultarPorId(new Long(4));

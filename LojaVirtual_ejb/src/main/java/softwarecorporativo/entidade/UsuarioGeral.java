@@ -43,8 +43,8 @@ public abstract class UsuarioGeral extends Entidade implements Serializable {
 private Long id;
 
 @NotBlank(message = "Nome do usuário não pode ser null")
-@Size(max=100)
-@Column (name="USUARIO_NOME", length=100)
+@Size(max=40)
+@Column (name="USUARIO_NOME", length=40)
 private String nome;
 
 @NotBlank(message = "Email do usuário não pode ser null")
@@ -59,11 +59,6 @@ private String email;
 @Column(name="USUARIO_CPF")
 private String cpf;
 
-@NotBlank(message = "Senha não pode ser null")
-
-@Size(max=30)
-@Column(name="USUARIO_SENHA")
-private String senha;
 
     public boolean possui(String nome){
         return nome.contains(nome);
@@ -116,14 +111,6 @@ private String senha;
         sb.append(this.cpf);
         
         return sb.toString();
-    }
-
-    public String getSenha() {
-        return senha;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
     }
   
 

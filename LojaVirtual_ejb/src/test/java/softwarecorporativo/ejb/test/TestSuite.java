@@ -2,7 +2,7 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
- 
+ */
 package softwarecorporativo.ejb.test;
 
 import org.junit.After;
@@ -15,7 +15,7 @@ import org.junit.runners.Suite;
 /**
  *
  * @author marcos
- 
+ */
 @RunWith(Suite.class)
 @Suite.SuiteClasses({AdministradorTest.class, ClienteTest.class, CorProdutoTest.class,
 EnderecoTest.class, ImagemProdutoTest.class, PedidoTest.class, ProdutoTest.class,
@@ -38,4 +38,4 @@ public class TestSuite {
     public void tearDown() throws Exception {
     }
     
-}*/
+}

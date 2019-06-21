@@ -74,7 +74,6 @@ public class AdministradorTest extends Teste{
         administrador.setEmail("jose@gmail.com");
         administrador.setNome("Natanael");
         administrador.setId(3l);
-        administrador.setSenha("oi");
         administrador.setPermissao("Concedida");
         
         administradorServico.persistirAdministrador(administrador);
