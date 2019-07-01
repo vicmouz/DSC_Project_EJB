@@ -5,6 +5,7 @@
  */
 package softwarecorporativo.ejb.test;
 
+import java.util.List;
 import javax.naming.NamingException;
 import org.junit.After;
 import static org.junit.Assert.assertEquals;
@@ -47,8 +48,17 @@ public class TamanhoProdutoTest extends Teste {
         assertNotNull(tamanhoProduto);
         assertEquals("Médio", tamanhoProduto.getNome());
     }
-    
-   
+    @Test
+    public void getTamanhos(){
+        List<TamanhoProduto> tamanhos = tamanhoservico.getTamanhos();
+        assertNotNull(tamanhos);
+    }
+   @Test
+   public void deletar(){
+        TamanhoProduto tamanhoProduto = tamanhoservico.consultarPorId(new Long(2));
+        assertNotNull(tamanhoProduto);
+        tamanhoservico.deletar(tamanhoProduto);
+   }
     
     @Test
     public void getTamanhoPorId() {

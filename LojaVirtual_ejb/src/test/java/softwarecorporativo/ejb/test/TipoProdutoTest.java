@@ -5,6 +5,7 @@
  */
 package softwarecorporativo.ejb.test;
 
+import java.util.List;
 import javax.naming.NamingException;
 import org.junit.After;
 import static org.junit.Assert.assertEquals;
@@ -49,10 +50,23 @@ public class TipoProdutoTest extends Teste{
         assertEquals("Chaveiro", tipoproduto.getNome());
     }
     
-      
+      /*
     @Test
     public void getTipoProdutoPorId() {
-        assertNotNull(tipoprodutoservico.consultarPorId(new Long(219)));
+        assertNotNull(tipoprodutoservico.consultarPorId(new Long(4)));
+    }
+    */
+    @Test
+    public void deletar(){
+         TipoProduto tipoproduto = tipoprodutoservico.consultarPorNome("Chaveiro");
+        assertNotNull(tipoproduto);
+        tipoprodutoservico.deletar(tipoproduto);
+       
+    }
+    @Test
+    public void getTipos(){
+        List<TipoProduto> tipos = tipoprodutoservico.getTipos();
+        assertNotNull(tipos);
     }
     
     @Test

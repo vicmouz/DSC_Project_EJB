@@ -55,7 +55,17 @@ public class ProdutoTest extends Teste{
         assertNotNull(produto);
         assertEquals("Boné Enorme", produto.getNome());
     }
-    
+    @Test
+    public void getProdutos(){
+        List<Produto> produtos = produtoServico.getProdutos();
+        assertNotNull(produtos);
+    }
+     @Test
+   public void deletar(){
+         Produto produto = produtoServico.consultarPorID(new Long(2));
+        assertNotNull(produto);
+        produtoServico.deletar(produto);
+   }
     
     
     @Test

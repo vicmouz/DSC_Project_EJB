@@ -5,8 +5,10 @@
  */
 package softwarecorporativo.ejb.test;
 
+import java.util.List;
 import javax.naming.NamingException;
 import org.junit.After;
+import org.junit.Assert;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
@@ -47,7 +49,20 @@ public class CorProdutoTest extends Teste {
         assertNotNull(corProduto);
         assertEquals("Amarelo", corProduto.getNome());
     }
+  /* @Test
+    public void deletar(){
+       CorProduto corProduto = corProdutoServico.consultarPorId(new Long(2));
+       assertNotNull(corProduto);
+       corProdutoServico.deletar(corProduto);
+        
+    }*/
     
+    @Test
+    public void listarcores(){
+     List<CorProduto> cor = corProdutoServico.getCores();
+        assertNotNull(cor);
+     
+    }
    
     
     @Test

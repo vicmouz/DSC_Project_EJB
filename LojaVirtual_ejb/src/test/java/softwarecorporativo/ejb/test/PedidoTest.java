@@ -5,6 +5,7 @@
  */
 package softwarecorporativo.ejb.test;
 
+import java.util.List;
 import javax.naming.NamingException;
 import org.junit.After;
 import static org.junit.Assert.assertEquals;
@@ -47,8 +48,17 @@ public class PedidoTest extends Teste {
         assertNotNull(pedido);
         assertEquals("nff979767", pedido.getLog());
     }
-    
-   
+    @Test
+    public void getPedidos(){
+        List<Pedido> pedidos = pedidoServico.getPedidos();
+        assertNotNull(pedidos);
+    }
+   @Test
+   public void deletar(){
+     Pedido pedido = pedidoServico.consultarPorId(new Long(2));
+       assertNotNull(pedido);
+       pedidoServico.deletar(pedido);
+   }
     
     @Test
     public void getPedidoPorId() {
