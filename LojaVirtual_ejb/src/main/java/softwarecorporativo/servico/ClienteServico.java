@@ -72,7 +72,6 @@ public class ClienteServico extends Servico<ClienteUsuario> {
     }
     
     @TransactionAttribute(SUPPORTS)
-
     public List<ClienteUsuario> getClientes() {
         return getEntidades(ClienteUsuario.CLIENTES);}
 

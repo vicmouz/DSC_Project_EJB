@@ -5,6 +5,7 @@
  */
 package softwarecorporativo.servico;
 
+import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
@@ -66,5 +67,8 @@ public class AdministradorServico extends Servico<Administrador> {
         return super.consultarEntidade(new Object[] {cpf}, Administrador.AdministradorPorCPF);
     }
     
-    
+    @TransactionAttribute(SUPPORTS)
+    public List<Administrador> getAdms() {
+        return getEntidades();}
+
 }

@@ -48,6 +48,9 @@ public class ClienteBean extends Bean<ClienteUsuario> implements Serializable {
     }
 
     public List<ClienteUsuario> getClientes() {
+        if (clientes == null) {
+            clientes = clienteServico.getClientes();
+        }
         return clientes;
     }
 
@@ -85,14 +88,7 @@ public class ClienteBean extends Bean<ClienteUsuario> implements Serializable {
         clienteServico.deletar(entidade);
         return true;
     }
-
-    public List<ClienteUsuario> getAlunos() {
-        if (clientes == null) {
-            clientes = clienteServico.getClientes();
-        }
-        return clientes;
-    }
-
+    
     @Override
     protected void iniciarCampos() {
         setEntidade(clienteServico.criar());

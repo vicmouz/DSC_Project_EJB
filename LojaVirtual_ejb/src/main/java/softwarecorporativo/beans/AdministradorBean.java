@@ -45,5 +45,20 @@ private List<Administrador> administradores;
     protected void iniciarCampos() {
         setEntidade(administradorServico.criar());
     }
+
+    
+
+    public List<Administrador> getAdministradores() {
+        if (administradores == null) {
+            administradores = administradorServico.getAdms();
+        }
+        return administradores;
+    }
+
+    public void setAdministradores(List<Administrador> administradores) {
+        this.administradores = administradores;
+    }
+    
+    
     
 }

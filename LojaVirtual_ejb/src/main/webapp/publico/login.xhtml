@@ -16,11 +16,10 @@
                 <p:panelGrid columns="2"  >
 
                     <h:outputText value="Email"/>
-                    <b:inputText value="#LoginBean.usuario}"/>
+                    <b:inputText placeholder="Digite o seu email..." value="#{loginBean.email}"/>
 
                     <h:outputText value="CPF"/>
-                    <b:inputSecret value="#LoginBean.cpf}"
-                                   />
+                    <b:inputText placeholder="Digite o seu CPF" value="#{loginBean.cpf}" />
 
 
                 </p:panelGrid><br/>
